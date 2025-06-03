@@ -1,0 +1,32 @@
+.banner {
+  background: linear-gradient(
+    94deg,
+    #bb0dba 11.47%,
+    #5c18dd 48.94%,
+    #0099ad 88.24%
+  );
+  padding: 10px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 32px;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-weight: 300;
+    a {
+      border-radius: 60px;
+      background: #000;
+      display: flex;
+      padding: 15px 50px;
+      align-items: flex-start;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

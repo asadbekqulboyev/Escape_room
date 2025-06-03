@@ -1,0 +1,74 @@
+.works {
+   &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+  
+      .timeline_scroll {
+        height: 80%;
+        width: 600px;
+        display: flex;
+        overflow-y: auto;
+        position: relative;
+      }
+  
+      .left_column,
+      .right_column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 60px;
+      }
+  
+      .left_column {
+        align-items: flex-end;
+        padding-right: 20px;
+      }
+  
+      .right_column {
+        align-items: flex-start;
+        padding-left: 20px;
+      }
+  
+      .step {
+        background: rgba(255, 255, 255, 0.04);
+        padding: 16px 20px;
+        border-radius: 12px;
+        max-width: 220px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+  
+      .step_number {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+  
+      /* Middle line (fake scroll track) */
+      .line {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        height: 80%;
+        width: 6px;
+        transform: translateX(-50%);
+        background: var(--grey-900, #110F1A);
+        border-radius: 30px;
+      }
+  
+      .thumb {
+        position: absolute;
+        left: 50%;
+        width: 6px;
+        height: 60px;
+        background: var(--green, #0099AD);
+        border-radius: 20px;
+        transform: translateX(-50%);
+        transition: top 0.2s ease;
+      }
+   }
+}

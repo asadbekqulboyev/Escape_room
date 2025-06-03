@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "hero";
+@import "escape";
+@import "banner";
+@import "adventure";
+@import "works";
+@import "contact";
+body {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1690px;
+}
+.component__top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  &-number {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    background: rgba(172, 20, 171, 0.1);
+    color: #bb0dba;
+    font-weight: 300;
+  }
+  &-title {
+    text-align: center;
+    font-size: 48px;
+    line-height: 130%;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &-description {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+  }
+}
+.main_bg {
+  background: url(../images/case_bg.png) no-repeat center;
+  background-size: 100% 100%;
+}
