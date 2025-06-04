@@ -1,74 +1,126 @@
 .works {
-   &__content{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        position: relative;
-  
-      .timeline_scroll {
-        height: 80%;
-        width: 600px;
-        display: flex;
-        overflow-y: auto;
-        position: relative;
+  position: relative;
+  user-select: none;
+  padding: 100px 0 60px;
+  .scrollbar {
+    width: 20px;
+    height: 1020px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 30px;
+    background: #110f1a;
+    &_thumb {
+      position: absolute;
+      width: 100%;
+      border-radius: 20px;
+      background: #0099ad;
+      min-height: 322px;
+      cursor: pointer;
+    }
+  }
+  &__content {
+    max-height: 1020px;
+    overflow: auto;
+    margin-top: 60px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__item {
+      width: calc(50% - 90px);
+      display: flex;
+      width: 600px;
+      padding: 30px;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 30px;
+      margin-top: 248px;
+      height: fit-content;
+      text-align: right;
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6),
+      &:nth-child(8) {
+        margin-top: 0px;
+        text-align: left;
       }
-  
-      .left_column,
-      .right_column {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 60px;
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(6) {
+        justify-content: flex-start;
       }
-  
-      .left_column {
-        align-items: flex-end;
-        padding-right: 20px;
-      }
-  
-      .right_column {
-        align-items: flex-start;
-        padding-left: 20px;
-      }
-  
-      .step {
-        background: rgba(255, 255, 255, 0.04);
-        padding: 16px 20px;
-        border-radius: 12px;
-        max-width: 220px;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-  
       .step_number {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 5px;
+        color: #fff;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        text-transform: uppercase;
       }
-  
-      /* Middle line (fake scroll track) */
-      .line {
-        position: absolute;
-        left: 50%;
-        top: 10%;
-        height: 80%;
-        width: 6px;
-        transform: translateX(-50%);
-        background: var(--grey-900, #110F1A);
-        border-radius: 30px;
+      span {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        text-transform: uppercase;
       }
-  
-      .thumb {
-        position: absolute;
-        left: 50%;
-        width: 6px;
-        height: 60px;
-        background: var(--green, #0099AD);
-        border-radius: 20px;
-        transform: translateX(-50%);
-        transition: top 0.2s ease;
+      &.active {
+        background: rgba(255, 255, 255, 0.05);
       }
-   }
+    }
+  }
+  &__keys {
+    .container {
+      padding: 100px;
+      background: url(../images/bg_advanture.png) no-repeat center;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__key-title,
+  &__info-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  &__key-number,
+  &__info-number {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    sup {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+    }
+  }
+  &__key-subtitle,
+  &__info-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__key {
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }

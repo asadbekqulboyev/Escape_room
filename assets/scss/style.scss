@@ -9,6 +9,12 @@
 @import "banner";
 @import "adventure";
 @import "works";
+@import "expriense";
+@import "testimonial";
+@import "service";
+@import "aditional";
+@import "booking";
+@import "packages";
 @import "contact";
 body {
   color: #fff;
@@ -20,6 +26,10 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1690px;
+  padding: 0 24px;
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 }
 .component__top {
   display: flex;
@@ -56,4 +66,28 @@ body {
 .main_bg {
   background: url(../images/case_bg.png) no-repeat center;
   background-size: 100% 100%;
+}
+.escape__item {
+  width: calc(33.33% - 10px);
+  padding: 40px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  &-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+  }
+  &-description {
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+.no-select {
+  user-select: none;
 }

@@ -1,0 +1,52 @@
+.booking {
+  padding-top: 120px;
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &__item {
+    width: calc(25% - 10px);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-height: 550px;
+    overflow: hidden;
+    &_top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &-title {
+      text-align: center;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+
+      text-transform: uppercase;
+    }
+    &-number {
+      color: rgba(255, 255, 255, 0.05);
+      text-align: center;
+      font-size: 240px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 40%;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 .adventure {
-  padding: 51px 0 100px;
+  padding: 51px 24px 100px;
   .container {
     padding: 100px;
     border-radius: 20px;
     position: relative;
     background: url(../images/bg_advanture.png) no-repeat center;
-    background-size: contain;
+    background-size: 100% 100%;
   }
   &__items {
     display: flex;
@@ -25,6 +25,13 @@
       span {
         color: #bb0dba;
       }
+    }
+  }
+  &.priority {
+    padding: 100px 0;
+    .adventure__items {
+      max-width: 1360px;
+      margin: 10px auto 0;
     }
   }
 }
