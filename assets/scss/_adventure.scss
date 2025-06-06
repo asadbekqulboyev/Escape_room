@@ -6,32 +6,87 @@
     position: relative;
     background: url(../images/bg_advanture.png) no-repeat center;
     background-size: 100% 100%;
+    @media (max-width: 1400px) {
+      padding: 60px;
+    }
+    @media (max-width: 768px) {
+      padding: 60px 15px;
+    }
   }
   &__items {
     display: flex;
     justify-content: space-between;
     gap: 60px;
     margin-top: 30px;
+    @media (max-width: 1400px) {
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
   }
+
   &__item {
     display: flex;
     flex-direction: column;
     gap: 0px;
     align-items: flex-start;
+    @media (max-width: 1200px) {
+      width: calc(25% - 20px);
+    }
+    @media (max-width: 992px) {
+      width: calc(33.33% - 20px);
+    }
+    @media (max-width: 768px) {
+      width: calc(50% - 20px);
+    }
     &-title {
       font-weight: 500;
       font-size: 20px;
       text-transform: uppercase;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
       span {
         color: #bb0dba;
       }
     }
   }
   &.priority {
-    padding: 100px 0;
+    padding: 100px 24px;
+    @media (max-width: 1200px) {
+      padding: 80px 24px;
+    }
+    @media (max-width: 768px) {
+      padding: 80px 24px;
+    }
+    .container {
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        padding: 60px 20px 60px 7px;
+      }
+    }
     .adventure__items {
       max-width: 1360px;
       margin: 10px auto 0;
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+    .adventure__item {
+      @media (max-width: 1200px) {
+        width: calc(33.33% - 15px);
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        width: calc(50% - 15px);
+      }
     }
   }
 }

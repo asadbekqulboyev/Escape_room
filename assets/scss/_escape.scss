@@ -1,9 +1,19 @@
 .mobile__escape {
   padding: 200px 0 100px;
+  @media (max-width: 1200px) {
+    padding: 160px 0 0;
+  }
+  @media (max-width: 768px) {
+    padding: 40px 0 0;
+  }
   .escape__items {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      gap: 20px 0;
+    }
     .escape__item {
       width: calc(33.33% - 10px);
       padding: 40px 20px;
@@ -14,6 +24,13 @@
       justify-content: center;
       gap: 10px;
       flex-direction: column;
+      @media (max-width: 1200px) {
+        width: calc(50% - 10px);
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px 10px;
+      }
       &-title {
         text-transform: uppercase;
         text-align: center;

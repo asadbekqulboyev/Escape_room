@@ -11,4 +11,14 @@
       }
     }
   }
+  .escape__item {
+    @media (max-width: 1200px) {
+      width: calc(50% - 10px);
+    }
+    &-title {
+      @media (max-width: 992px) {
+        font-size: 24px;
+      }
+    }
+  }
 }

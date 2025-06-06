@@ -1,9 +1,20 @@
 .additional {
   padding: 100px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
   &__items {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1450px) {
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 10px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
   }
   &__item {
     width: calc(25% - 15px);
@@ -14,10 +25,22 @@
     flex-direction: column;
     gap: 20px;
     padding: 10px;
+    @media (max-width: 1450px) {
+      width: calc(33.33% - 15px);
+    }
+    @media (max-width: 992px) {
+      width: calc(50% - 5px);
+      border-radius: 20px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     &-img {
       width: 100%;
       object-fit: contain;
       border-radius: 30px;
+      @media (max-width: 992px) {
+      }
     }
     &-title {
       text-align: center;
@@ -26,6 +49,12 @@
       font-weight: 500;
       line-height: 130%;
       text-transform: uppercase;
+      @media (max-width: 1200px) {
+        font-size: 26px;
+      }
+      @media (max-width: 992px) {
+        font-size: 24px;
+      }
     }
   }
 }

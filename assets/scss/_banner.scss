@@ -13,12 +13,19 @@
   }
   &__title {
     font-size: 32px;
+    @media (max-width: 1200px) {
+      font-size: 24px;
+    }
+    @media (max-width: 556px) {
+      font-size: 14px;
+    }
   }
   &__links {
     display: flex;
     align-items: center;
     gap: 40px;
     font-weight: 300;
+    flex: 0 0 auto;
     a {
       border-radius: 60px;
       background: #000;
@@ -27,6 +34,11 @@
       align-items: flex-start;
       color: #fff;
       text-decoration: none;
+    }
+    .banner_subtitle {
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 }

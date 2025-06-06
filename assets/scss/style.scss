@@ -56,11 +56,23 @@ body {
     line-height: 130%;
     font-weight: 500;
     text-transform: uppercase;
+    @media (max-width: 1200px) {
+      font-size: 36px;
+    }
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
   &-description {
     text-align: center;
     font-size: 32px;
     font-weight: 300;
+    @media (max-width: 1200px) {
+      font-size: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 }
 .main_bg {
@@ -90,4 +102,233 @@ body {
 }
 .no-select {
   user-select: none;
+}
+.modal {
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(25px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+  &_header {
+    display: flex;
+    .exit_modal {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      background: rgba(172, 20, 171, 0.2);
+      position: absolute;
+      left: 0;
+      top: 200px;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        right: 10px;
+        top: 10px;
+        left: auto;
+      }
+    }
+  }
+  &_content {
+    border-radius: 20px;
+    border: 4px solid #bb0dba;
+    background: #110f1a;
+    margin: auto;
+    width: 100%;
+    max-width: 610px;
+    padding: 60px;
+    height: fit-content;
+    @media (max-width: 768px) {
+      position: relative;
+      padding: 30px;
+    }
+    &_items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      margin-top: 30px;
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        position: relative;
+        span {
+          color: #bbb6c0;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 160%;
+        }
+        input {
+          border-radius: 60px;
+          border: 2px solid #3f3b54;
+          display: flex;
+          padding: 15px 30px;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          background: #110f1a;
+          color: #fff;
+          width: 100%;
+        }
+      }
+    }
+    .booking_form {
+      background: #0f0f1b;
+      margin-top: 20px;
+      .input_group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        .input_box {
+          position: relative;
+          width: 100%;
+
+          input {
+            background: transparent;
+            border: 2px solid #0099ad;
+            padding: 12px 20px;
+            padding-right: 45px; // icon joyi uchun
+            border-radius: 60px;
+            color: white;
+            font-size: 16px;
+            appearance: none;
+            cursor: pointer;
+            width: 100%;
+          }
+
+          .icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+
+            svg {
+              width: 16px;
+              height: 16px;
+              fill: white;
+            }
+          }
+        }
+      }
+
+      .checkbox_group {
+        display: flex;
+        align-items: center;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          position: relative;
+          input[type="checkbox"] {
+            display: none;
+            &:checked + .custom_checkbox::after {
+              opacity: 1;
+            }
+          }
+
+          .custom_checkbox {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #0099ad;
+            border-radius: 4px;
+            position: relative;
+            flex: 0 0 auto;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 82%;
+              height: 82%;
+              background: #00e5ff;
+              top: 3px;
+              left: 3px;
+              opacity: 0;
+              transition: 0.2s;
+            }
+          }
+
+          .terms_text {
+            color: #bbb6c0;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 160%;
+            padding-right: 30px;
+            @media (max-width: 768px) {
+              font-size: 11px;
+            }
+            a {
+              color: #d861e4;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .continue_btn {
+        background: linear-gradient(135deg, #5c18dd, #e700c4);
+        border: none;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        flex: 0 0 auto;
+        @media (max-width: 768px) {
+          font-size: 12px;
+          width: 56px;
+          height: 56px;
+          text-transform: uppercase;
+          word-break: break-all;
+          padding: 0 7px;
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  &_title {
+    color: #fff;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    @media (max-width: 1200px) {
+      font-size: 36px;
+    }
+    span {
+      color: #ef66ee;
+    }
+  }
+}
+.iti__selected-flag {
+  padding-left: 20px;
+}
+
+.modal_order {
+  display: none;
 }

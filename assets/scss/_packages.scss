@@ -1,5 +1,12 @@
 .packages {
   padding: 100px 0;
+  @media (max-width: 1200px) {
+    padding: 60px 0px;
+  }
+  @media (max-width: 768px) {
+    padding: 40px 0px;
+  }
+
   &__content {
     width: 100%;
     border-radius: 30px;
@@ -12,11 +19,24 @@
     gap: 4px;
     width: 100%;
     margin-top: 4px;
+    @media (max-width: 1200px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
   &__header {
     display: flex;
     align-items: center;
     gap: 4px;
+    @media (max-width: 1200px) {
+      display: none !important;
+    }
     &-item {
       background: #000;
       padding: 0 40px;
@@ -48,6 +68,23 @@
     gap: 4px;
     height: 110px;
     width: 100%;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      height: fit-content;
+      max-width: 547px;
+    }
+
+    .mobile__show {
+      display: none;
+      @media (max-width: 1200px) {
+        display: block;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        color: #bbb6c0;
+        text-transform: uppercase;
+      }
+    }
     &-logo {
       display: flex;
       align-items: center;
@@ -57,12 +94,28 @@
       background: #000;
       height: 100%;
       gap: 20px;
+      @media (max-width: 1200px) {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
       h2 {
         font-size: 80px;
         font-style: normal;
         font-weight: 500;
         line-height: 110%;
         text-transform: uppercase;
+        @media (max-width: 1680px) {
+          font-size: 56px;
+        }
+        @media (max-width: 1400px) {
+          font-size: 38px;
+        }
+        @media (max-width: 1200px) {
+          font-size: 56px;
+        }
       }
     }
     &-text {
@@ -76,6 +129,20 @@
       font-size: 32px;
       font-style: normal;
       font-weight: 300;
+      @media (max-width: 1680px) {
+        font-size: 28px;
+      }
+      @media (max-width: 1400px) {
+        font-size: 25px;
+      }
+      @media (max-width: 1200px) {
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 24px;
+      }
     }
     &-price {
       height: 100%;
@@ -86,9 +153,16 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      .mobile__show {
-        display: none;
+      @media (max-width: 1200px) {
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        font-size: 24px;
       }
+
       span {
         font-size: 32px;
         font-style: normal;

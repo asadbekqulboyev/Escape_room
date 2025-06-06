@@ -12,14 +12,21 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     breakpoints: {
+      1550: {
+        slidesPerView: 4.2,
+      },
+      1200: {
+        slidesPerView: 3.1,
+      },
       1024: {
-        slidesPerView: 4.4,
+        slidesPerView: 2.5,
       },
+
       768: {
-        slidesPerView: 2,
+        slidesPerView: 2.8,
       },
-      480: {
-        slidesPerView: 1,
+      0: {
+        slidesPerView: 1.5,
       },
     },
   });
@@ -36,7 +43,7 @@ $(document).ready(function () {
     const thumbHeight = Math.max(
       (containerHeight / contentHeight) * containerHeight,
       50
-    ); 
+    );
     const thumbTop = (scrollTop / contentHeight) * containerHeight;
 
     $thumb.css({
@@ -101,5 +108,34 @@ $(document).ready(function () {
   $(document).on("mouseup", function () {
     isDragging = false;
     $("body").removeClass("no-select");
+  });
+  // Initialize intl-tel-input
+  const iti = window.intlTelInput($("#phone_input")[0], {
+    initialCountry: "fi", // Finland
+    nationalMode: false,
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js",
+  });
+
+  // Initialize flatpickr for date
+  $("#datePicker").flatpickr({
+    dateFormat: "D M d, Y",
+    defaultDate: "2025-09-12",
+  });
+
+  // Initialize flatpickr for time
+  $("#timePicker").flatpickr({
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "h:i K",
+    defaultDate: "11:30",
+    time_24hr: false,
+  });
+  $(".open_modal").click(function (e) {
+    e.preventDefault();
+    $(".modal_order").fadeIn();
+  });
+  $(".exit_modal").click(function () {
+    $(".modal_order").fadeOut();
   });
 });

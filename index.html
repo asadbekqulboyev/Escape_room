@@ -12,6 +12,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -31,7 +39,7 @@
                 minutes, tons of excitement. Perfect for corporate events,
                 parties, and graduations!
               </p>
-              <a href="#" class="hero__content-link">Book Now</a>
+              <a href="#" class="hero__content-link open_modal">Book Now</a>
             </div>
             <div class="hero__videos">
               <video
@@ -200,8 +208,10 @@
                     <div class="step_number">08</div>
                   </li>
                   <li class="works__content__item">
+                    <span>
+                      Puzzles, secret compartments, and story-driven gameplay
+                    </span>
                     <div class="step_number">07</div>
-                    <span> Guided by a professional game master </span>
                   </li>
                 </ul>
               </div>
@@ -221,11 +231,16 @@
                 <img src="assets/images/advanture3.svg" alt="" />
                 <div class="works__key__info">
                   <div class="works__key-title">Participants:</div>
-                  <div class="works__key-number"><sup>Up to</sup> 30</div>
+                  <div class="works__key-number"><sup>Up to</sup> 16</div>
                   <div class="works__key-subtitle">minutes</div>
                 </div>
               </div>
               <div class="works__right">
+                <img
+                  src="assets/images/escape1.svg"
+                  alt=""
+                  class="works__desctop_none"
+                />
                 <div class="works__icons">
                   <img src="assets/images/key_icon1.svg" alt="" />
                   <img src="assets/images/key_icon2.svg" alt="" />
@@ -351,6 +366,7 @@
                   </div>
                 </div>
               </div>
+              <a href="#" class="expriense__btn">View more</a>
             </div>
 
             <div class="testimonial">
@@ -500,7 +516,8 @@
                         <h2>Standard</h2>
                       </div>
                       <div class="packages__item-text">
-                        2 hours of gameplay, up to 4 rounds
+                        <div class="mobile__show">Description</div>
+                        <span> 2 hours of gameplay, up to 4 rounds</span>
                       </div>
                       <div class="packages__item-price">
                         <h4 class="mobile__show">Price</h4>
@@ -513,7 +530,8 @@
                         <h2>Corporate</h2>
                       </div>
                       <div class="packages__item-text">
-                        Branding, custom challenges, up to 6 rounds
+                        <div class="mobile__show">Description</div>
+                        <span>Branding, custom challenges, up to 6 rounds</span>
                       </div>
                       <div class="packages__item-price">
                         <h4 class="mobile__show">Price</h4>
@@ -526,7 +544,8 @@
                         <h2>Party</h2>
                       </div>
                       <div class="packages__item-text">
-                        Ideal for birthdays, graduations
+                        <div class="mobile__show">Description</div>
+                        <span>Ideal for birthdays, graduations</span>
                       </div>
                       <div class="packages__item-price">
                         <h4 class="mobile__show">Price</h4>
@@ -735,6 +754,7 @@
                   <img src="assets/images/contact_arrow.svg" alt="" />
                   <img src="assets/images/contact_arrow2.svg" alt="" />
                   <img src="assets/images/contact_arrow3.svg" alt="" />
+                  <img src="assets/images/contact_arrow4.svg" alt="" />
                   <a href="#">Book Now</a>
                 </div>
               </div>
@@ -781,6 +801,9 @@
                       </li>
                     </ul>
                     <ul class="contact__content__social-lists">
+                      <span class="contact__content__left-title"
+                        >HOURS OF OPERATION</span
+                      >
                       <li>
                         <a href="#"
                           ><img src="assets/images/social1.svg" alt=""
@@ -818,8 +841,107 @@
         </div>
       </main>
     </div>
+    <div class="modal_order">
+      <div class="modal">
+        <form class="modal_content">
+          <div class="modal_header">
+            <h2 class="modal_title">
+              pre-order of An Escape Room <span>That Comes to You!</span>
+            </h2>
+            <div class="exit_modal">
+              <img src="assets/images/close.svg" alt="" />
+            </div>
+          </div>
+          <div class="modal_content_items">
+            <label>
+              <span>FIRST NAME*</span>
+              <input type="text" placeholder="Ваше имя" name="first_name" />
+            </label>
+            <label>
+              <span>TELEPHONE*</span>
+              <input
+                type="tel"
+                placeholder="Ваш телефон"
+                id="phone_input"
+                name="phone"
+                class="phone_input"
+              />
+            </label>
+          </div>
+          <div class="booking_form">
+            <div class="input_group">
+              <div class="input_box">
+                <input
+                  type="date"
+                  id="datePicker"
+                  placeholder="tue sep 12, 2025"
+                  value="tue sep 12, 2025"
+                />
+                <span class="icon">
+                  <!-- Kalendar ikonkasi -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 10H17V12H7V10ZM7 14H14V16H7V14ZM19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 
+                    21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="input_box">
+                <input type="time" id="timePicker" />
+                <span class="icon">
+                  <!-- Soat ikonkasi -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 8V13H16V15H10V8H12ZM12 2C6.48 2 2 6.48 2 12C2 17.52 
+                    6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 
+                    2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 
+                    7.59 20 12C20 16.41 16.41 20 12 20Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="checkbox_group">
+              <label for="agree_terms">
+                <input type="checkbox" id="agree_terms" />
+                <span class="custom_checkbox"></span>
+                <span class="terms_text">
+                  Please confirm that you agree to our terms and conditions to
+                  complete your booking.
+                  <a href="#">View terms</a>
+                </span>
+              </label>
+              <button class="continue_btn">CONTINUE</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"></script>
+  <!-- flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   <script src="assets/js/main.js"></script>
 </html>
