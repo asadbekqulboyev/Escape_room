@@ -729,6 +729,7 @@
 @media (max-width: 768px) {
   .expriense__item {
     height: 260px;
+    padding: 10px;
   }
 }
 .expriense__item-title {
@@ -769,6 +770,11 @@
     margin-top: 80px;
   }
 }
+@media (max-width: 768px) {
+  .expriense__videos {
+    margin-top: 40px;
+  }
+}
 .expriense__video {
   display: flex;
   padding: 10px;
@@ -787,6 +793,8 @@
 @media (max-width: 768px) {
   .expriense__video {
     width: 100%;
+    border-radius: 20px;
+    padding: 5px;
   }
 }
 .expriense__video_content {
@@ -801,10 +809,20 @@
   border-radius: 20px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .expriense__video_content video {
+    border-radius: 15px;
+  }
+}
 .expriense__video_content .play {
   position: absolute;
   inset: 0;
   margin: auto;
+}
+@media (max-width: 768px) {
+  .expriense__video_content .play {
+    width: 36px;
+  }
 }
 .expriense__video__bottom {
   display: flex;
@@ -823,6 +841,18 @@
     font-size: 17px;
   }
 }
+@media (max-width: 768px) {
+  .expriense__video__bottom span {
+    font-size: 16px;
+    line-height: 160%;
+  }
+}
+@media (max-width: 768px) {
+  .expriense__video__bottom img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .expriense__video-title {
   font-size: 16px;
   font-style: normal;
@@ -833,6 +863,11 @@
   .expriense__video-title {
     font-size: 15px;
     font-style: normal;
+  }
+}
+@media (max-width: 1200px) {
+  .expriense__video-title {
+    font-size: 14px;
   }
 }
 .expriense__btn {
@@ -884,6 +919,11 @@
     padding-bottom: 40px;
   }
 }
+@media (max-width: 768px) {
+  .testimonial__slider {
+    padding-bottom: 30px;
+  }
+}
 .testimonial .container {
   position: relative;
 }
@@ -911,6 +951,11 @@
     max-height: 400px;
   }
 }
+@media (max-width: 556px) {
+  .testimonial .testimonial__item {
+    padding: 10px;
+  }
+}
 .testimonial .testimonial__text {
   font-size: 32px;
   font-style: normal;
@@ -920,6 +965,11 @@
 @media (max-width: 768px) {
   .testimonial .testimonial__text {
     font-size: 24px;
+  }
+}
+@media (max-width: 556px) {
+  .testimonial .testimonial__text {
+    font-size: 20px;
   }
 }
 .testimonial .testimonial__footer {

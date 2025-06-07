@@ -26,7 +26,8 @@ $(document).ready(function () {
         slidesPerView: 2.8,
       },
       0: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.15,
+        spaceBetween: 10,
       },
     },
   });
