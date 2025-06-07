@@ -387,6 +387,11 @@
     padding: 80px 24px;
   }
 }
+@media (max-width: 556px) {
+  .adventure.priority {
+    padding: 60px 24px;
+  }
+}
 @media (max-width: 1200px) {
   .adventure.priority .container {
     flex-wrap: wrap;
@@ -1135,6 +1140,11 @@
 .service {
   padding: 100px 0;
 }
+@media (max-width: 768px) {
+  .service {
+    padding: 60px 0;
+  }
+}
 .service__items {
   display: flex;
   justify-content: center;
@@ -1236,12 +1246,24 @@
 @media (max-width: 768px) {
   .additional__item {
     width: 100%;
+    padding: 5px;
+    gap: 10px;
   }
 }
 .additional__item-img {
   width: 100%;
   object-fit: contain;
   border-radius: 30px;
+}
+@media (max-width: 992px) {
+  .additional__item-img {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .additional__item-img {
+    border-radius: 15px;
+  }
 }
 .additional__item-title {
   text-align: center;
@@ -1261,9 +1283,24 @@
     font-size: 24px;
   }
 }
+@media (max-width: 768px) {
+  .additional__item-title {
+    font-size: 20px;
+  }
+}
 
 .booking {
   padding-top: 120px;
+}
+@media (max-width: 1200px) {
+  .booking {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 1200px) {
+  .booking {
+    padding-top: 40px;
+  }
 }
 .booking__title {
   text-align: center;
@@ -1348,6 +1385,11 @@
 @media (max-width: 768px) {
   .booking__item-title {
     font-size: 20px;
+  }
+}
+@media (max-width: 556px) {
+  .booking__item-title {
+    font-size: 17px;
   }
 }
 .booking__item-number {
@@ -1652,6 +1694,8 @@
 @media (max-width: 556px) {
   .contact__banner {
     padding: 24px 15px;
+    border-radius: 12px;
+    background: linear-gradient(169deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   }
 }
 .contact__banner-top {
@@ -1663,6 +1707,11 @@
 @media (max-width: 1200px) {
   .contact__banner-top {
     margin: 0 auto;
+  }
+}
+@media (max-width: 665px) {
+  .contact__banner-top {
+    padding: 15px;
   }
 }
 .contact__banner-top span {
@@ -1863,6 +1912,11 @@
 }
 .contact__content__social-lists .contact__content__left-title {
   width: 100%;
+}
+@media (max-width: 556px) {
+  .contact__content__social-lists img {
+    width: 60px;
+  }
 }
 .contact__content__items {
   display: flex;

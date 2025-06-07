@@ -85,6 +85,9 @@
     @media (max-width: 768px) {
       padding: 80px 24px;
     }
+    @media (max-width: 556px) {
+      padding: 60px 24px;
+    }
     .container {
       @media (max-width: 1200px) {
         flex-wrap: wrap;

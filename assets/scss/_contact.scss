@@ -11,6 +11,7 @@
       #5c18dd 48.94%,
       #0099ad 88.24%
     );
+
     padding: 100px;
     display: flex;
     justify-content: space-between;
@@ -23,6 +24,13 @@
     }
     @media (max-width: 556px) {
       padding: 24px 15px;
+      border-radius: 12px;
+      background: linear-gradient(
+        169deg,
+        #bb0dba 11.47%,
+        #5c18dd 48.94%,
+        #0099ad 88.24%
+      );
     }
     &-top {
       border-radius: 60px;
@@ -32,7 +40,9 @@
       @media (max-width: 1200px) {
         margin: 0 auto;
       }
-
+      @media (max-width: 665px) {
+        padding: 15px;
+      }
       span {
         background: linear-gradient(
           94deg,
@@ -204,6 +214,11 @@
       flex-wrap: wrap;
       .contact__content__left-title {
         width: 100%;
+      }
+      img {
+        @media (max-width: 556px) {
+          width: 60px;
+        }
       }
     }
     &__items {
