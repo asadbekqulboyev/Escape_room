@@ -1542,6 +1542,11 @@
   text-align: right;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .packages__item-price span {
+    font-size: 20px;
+  }
+}
 .packages__link {
   display: flex;
   align-items: center;

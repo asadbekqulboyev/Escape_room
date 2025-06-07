@@ -177,6 +177,9 @@
         font-weight: 500;
         text-align: right;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+          font-size: 20px;
+        }
       }
     }
   }
