@@ -41,6 +41,7 @@
       min-height: auto;
       max-height: 300px;
       padding: 10px;
+      width: calc(50% - 5px);
     }
     &_top {
       display: flex;
@@ -51,6 +52,9 @@
     &-img {
       @media (max-width: 768px) {
         max-width: 78px;
+      }
+      @media (max-width: 556px) {
+        max-width: 70px;
       }
     }
     &-title {

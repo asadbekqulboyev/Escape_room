@@ -190,6 +190,11 @@
     text-decoration: none;
     color: #fff;
     margin-top: 10px;
+    img {
+      @media (max-width: 556px) {
+        width: 80px;
+      }
+    }
   }
   &__info {
     display: flex;
@@ -199,12 +204,18 @@
     gap: 10px;
     &-title {
       font-weight: 300;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
     p {
       font-size: 20px;
       font-style: normal;
       font-weight: 500;
       text-transform: uppercase;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
 }
