@@ -1472,6 +1472,16 @@
     font-size: 56px;
   }
 }
+@media (max-width: 768px) {
+  .packages__item-logo h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .packages__item-logo img {
+    width: 46px;
+  }
+}
 .packages__item-text {
   padding: 0 40px;
   max-width: 682px;
