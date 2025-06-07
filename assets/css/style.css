@@ -261,6 +261,12 @@
   text-decoration: none;
 }
 @media (max-width: 768px) {
+  .banner__links a {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
   .banner__links .banner_subtitle {
     display: none;
   }
@@ -268,6 +274,16 @@
 
 .adventure {
   padding: 51px 24px 100px;
+}
+@media (max-width: 1200px) {
+  .adventure {
+    padding: 51px 0px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .adventure {
+    padding: 60px 15px;
+  }
 }
 .adventure .container {
   padding: 100px;
@@ -283,7 +299,12 @@
 }
 @media (max-width: 768px) {
   .adventure .container {
-    padding: 60px 15px;
+    padding: 60px 0px;
+  }
+}
+@media (max-width: 768px) {
+  .adventure .component__top {
+    padding: 0 15px;
   }
 }
 .adventure__items {
@@ -300,6 +321,12 @@
 @media (max-width: 1200px) {
   .adventure__items {
     flex-wrap: wrap;
+    gap: 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .adventure__items {
+    padding-right: 10px;
   }
 }
 .adventure__item {
@@ -320,7 +347,17 @@
 }
 @media (max-width: 768px) {
   .adventure__item {
-    width: calc(50% - 20px);
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 556px) {
+  .adventure__item {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .adventure__item img {
+    width: 78px;
   }
 }
 .adventure__item-title {
@@ -331,6 +368,7 @@
 @media (max-width: 768px) {
   .adventure__item-title {
     font-size: 16px;
+    padding-left: 15px;
   }
 }
 .adventure__item-title span {
@@ -360,6 +398,11 @@
     padding: 60px 20px 60px 7px;
   }
 }
+@media (max-width: 556px) {
+  .adventure.priority .container {
+    padding: 60px 5px 60px 0px;
+  }
+}
 .adventure.priority .adventure__items {
   max-width: 1360px;
   margin: 10px auto 0;
@@ -368,6 +411,11 @@
   .adventure.priority .adventure__items {
     flex-wrap: wrap;
     width: 100%;
+  }
+}
+@media (max-width: 556px) {
+  .adventure.priority .adventure__items {
+    gap: 10px;
   }
 }
 @media (max-width: 1200px) {
@@ -383,11 +431,34 @@
     width: calc(50% - 15px);
   }
 }
+@media (max-width: 556px) {
+  .adventure.priority .adventure__item {
+    width: calc(50% - 5px);
+  }
+}
+.adventure.priority .adventure__item img {
+  max-width: 100%;
+}
+@media (max-width: 556px) {
+  .adventure.priority .adventure__item img {
+    width: 78px;
+  }
+}
+@media (max-width: 556px) {
+  .adventure.priority .adventure__item-title {
+    font-size: 16px;
+  }
+}
 
 .works {
   position: relative;
   user-select: none;
   padding: 100px 0 60px;
+}
+@media (max-width: 768px) {
+  .works {
+    padding: 60px 0px;
+  }
 }
 .works .scrollbar {
   width: 20px;
@@ -407,7 +478,9 @@
 }
 @media (max-width: 768px) {
   .works .scrollbar {
-    max-height: 590px;
+    max-height: 330px;
+    height: 330px;
+    width: 10px;
   }
 }
 .works .scrollbar_thumb {
@@ -417,6 +490,11 @@
   background: #0099ad;
   min-height: 322px;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .works .scrollbar_thumb {
+    min-height: 130px;
+  }
 }
 .works__content {
   max-height: 1020px;
@@ -428,7 +506,7 @@
 }
 @media (max-width: 768px) {
   .works__content {
-    max-height: 590px;
+    max-height: 330px;
   }
 }
 .works__content__items {
@@ -464,7 +542,8 @@
 }
 @media (max-width: 768px) {
   .works__content__item {
-    gap: 20px;
+    gap: 10px;
+    padding: 10px;
   }
 }
 @media (max-width: 1250px) {
@@ -524,6 +603,11 @@
     font-size: 56px;
   }
 }
+@media (max-width: 556px) {
+  .works__content__item .step_number {
+    font-size: 32px;
+  }
+}
 .works__content__item span {
   font-size: 20px;
   font-style: normal;
@@ -534,7 +618,7 @@
 @media (max-width: 768px) {
   .works__content__item span {
     text-align: left;
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 .works__content__item.active {
@@ -666,16 +750,16 @@
 }
 
 .expriense {
-  padding: 100px 24px;
+  padding: 100px 9px;
 }
 @media (max-width: 1200px) {
   .expriense {
-    padding: 60px 15px;
+    padding: 60px 0px;
   }
 }
 @media (max-width: 768px) {
   .expriense {
-    padding: 40px 15px;
+    padding: 40px 0px;
   }
 }
 .expriense__items {
@@ -699,6 +783,11 @@
   .expriense__items {
     justify-content: space-between;
     gap: 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .expriense__items {
+    gap: 10px 0;
   }
 }
 .expriense__item {
@@ -728,6 +817,7 @@
 }
 @media (max-width: 768px) {
   .expriense__item {
+    width: calc(50% - 5px);
     height: 260px;
     padding: 10px;
   }
