@@ -206,10 +206,20 @@
   text-align: center;
   font-size: 32px;
 }
+@media (max-width: 768px) {
+  .mobile__escape .escape__items .escape__item-title {
+    font-size: 20px;
+  }
+}
 .mobile__escape .escape__items .escape__item-description {
   font-weight: 300;
   text-align: center;
   margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .mobile__escape .escape__items .escape__item-description {
+    font-size: 16px;
+  }
 }
 
 .banner {
@@ -1127,11 +1137,23 @@
     width: calc(50% - 10px);
   }
 }
+@media (max-width: 768px) {
+  .booking__item {
+    min-height: auto;
+    max-height: 300px;
+    padding: 10px;
+  }
+}
 .booking__item_top {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .booking__item-img {
+    max-width: 78px;
+  }
 }
 .booking__item-title {
   text-align: center;
@@ -1143,6 +1165,11 @@
 @media (max-width: 1580px) {
   .booking__item-title {
     font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .booking__item-title {
+    font-size: 20px;
   }
 }
 .booking__item-number {
@@ -1157,6 +1184,11 @@
 @media (max-width: 1580px) {
   .booking__item-number {
     font-size: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .booking__item-number {
+    font-size: 80px;
   }
 }
 
