@@ -332,3 +332,16 @@ body {
 .modal_order {
   display: none;
 }
+// play none
+video {
+  cursor: pointer;
+}
+video::-webkit-media-controls {
+  display: none !important;
+}
+.play {
+  cursor: pointer;
+}
+.play.hidden {
+  display: none;
+}

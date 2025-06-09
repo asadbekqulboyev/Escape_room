@@ -139,4 +139,36 @@ $(document).ready(function () {
   $(".exit_modal").click(function () {
     $(".modal_order").fadeOut();
   });
+  // play
+  $(".play").each(function () {
+    var $btn = $(this);
+    var $container = $btn.parent(); // icon va video bir containerda deb olamiz
+    var $video = $container.find("video")[0]; // DOM video elementi
+
+    // Play tugmasi bosilganda
+    $btn.on("click", function () {
+      $video.play();
+      $btn.addClass("hidden");
+    });
+
+    // Videoga bosganda play/pause
+    $($video).on("click", function () {
+      if ($video.paused) {
+        $video.play();
+        $btn.addClass("hidden");
+      } else {
+        $video.pause();
+      }
+    });
+
+    // Pause bo'lsa tugma chiqadi
+    $($video).on("pause", function () {
+      $btn.removeClass("hidden");
+    });
+
+    // Play bo'lsa tugma yashirinadi
+    $($video).on("play", function () {
+      $btn.addClass("hidden");
+    });
+  });
 });
