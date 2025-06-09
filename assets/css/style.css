@@ -2189,6 +2189,11 @@ body {
     padding: 30px;
   }
 }
+@media (max-width: 556px) {
+  .modal_content {
+    padding: 50px 20px;
+  }
+}
 .modal_content_items {
   display: flex;
   flex-direction: column;
@@ -2245,6 +2250,12 @@ body {
   appearance: none;
   cursor: pointer;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .modal_content .booking_form .input_group .input_box input {
+    font-size: 12px;
+    padding: 12px 13px;
+  }
 }
 .modal_content .booking_form .input_group .input_box .icon {
   position: absolute;
@@ -2305,6 +2316,7 @@ body {
 @media (max-width: 768px) {
   .modal_content .booking_form .checkbox_group label .terms_text {
     font-size: 11px;
+    padding-right: 20px;
   }
 }
 .modal_content .booking_form .checkbox_group label .terms_text a {
@@ -2348,6 +2360,11 @@ body {
 @media (max-width: 1200px) {
   .modal_title {
     font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .modal_title {
+    font-size: 30px;
   }
 }
 .modal_title span {
