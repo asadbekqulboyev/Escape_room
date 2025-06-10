@@ -1202,12 +1202,12 @@
   }
 }
 @media (max-width: 992px) {
-  .service .escape__item img {
+  .service .escape__item svg {
     max-width: 78px;
   }
 }
 @media (max-width: 768px) {
-  .service .escape__item img {
+  .service .escape__item svg {
     max-width: 70px;
   }
 }
