@@ -1789,15 +1789,15 @@
 .contact__link {
   position: relative;
 }
-.contact__link img {
+.contact__link svg {
   position: absolute;
 }
-.contact__link img:first-child {
+.contact__link svg:first-child {
   top: -110px;
   left: -129%;
 }
 @media (max-width: 1200px) {
-  .contact__link img:first-child {
+  .contact__link svg:first-child {
     top: 0;
     left: -90%;
     transform: rotate(322deg);
@@ -1805,16 +1805,16 @@
   }
 }
 @media (max-width: 556px) {
-  .contact__link img:first-child {
+  .contact__link svg:first-child {
     width: 79px;
   }
 }
-.contact__link img:nth-child(2) {
+.contact__link svg:nth-child(2) {
   top: -150px;
   right: -100px;
 }
 @media (max-width: 1200px) {
-  .contact__link img:nth-child(2) {
+  .contact__link svg:nth-child(2) {
     top: -75px;
     right: -129px;
     width: 119.996px;
@@ -1822,40 +1822,40 @@
   }
 }
 @media (max-width: 556px) {
-  .contact__link img:nth-child(2) {
+  .contact__link svg:nth-child(2) {
     width: 59px;
     top: -39px;
     right: -75px;
   }
 }
-.contact__link img:nth-child(3) {
+.contact__link svg:nth-child(3) {
   bottom: -50px;
   left: -134%;
 }
 @media (max-width: 1200px) {
-  .contact__link img:nth-child(3) {
+  .contact__link svg:nth-child(3) {
     display: none;
   }
 }
 @media (max-width: 556px) {
-  .contact__link img:nth-child(3) {
+  .contact__link svg:nth-child(3) {
     width: 59px;
     top: -39px;
     right: -75px;
   }
 }
-.contact__link img:nth-child(4) {
+.contact__link svg:nth-child(4) {
   display: none;
 }
 @media (max-width: 1200px) {
-  .contact__link img:nth-child(4) {
+  .contact__link svg:nth-child(4) {
     display: block;
     bottom: 0;
     right: -190px;
   }
 }
 @media (max-width: 556px) {
-  .contact__link img:nth-child(4) {
+  .contact__link svg:nth-child(4) {
     width: 87px;
     top: auto;
     right: -100px;
