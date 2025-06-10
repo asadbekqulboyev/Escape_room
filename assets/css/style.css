@@ -375,9 +375,12 @@
     width: 50%;
   }
 }
+.adventure__item svg {
+  height: fit-content;
+}
 @media (max-width: 768px) {
-  .adventure__item img {
-    width: 78px;
+  .adventure__item svg {
+    width: 95px;
   }
 }
 .adventure__item-title {
