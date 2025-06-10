@@ -1945,7 +1945,7 @@
   width: 100%;
 }
 @media (max-width: 556px) {
-  .contact__content__social-lists img {
+  .contact__content__social-lists svg {
     width: 60px;
   }
 }
