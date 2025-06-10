@@ -34,9 +34,9 @@
       &-title {
         text-transform: uppercase;
         text-align: center;
-        font-size: 32px;
+        font-size: var(--h3);
         @media (max-width: 768px) {
-          font-size: 20px;
+          font-size: var(--h4);
         }
       }
       &-description {
@@ -44,7 +44,7 @@
         text-align: center;
         margin-top: 10px;
         @media (max-width: 768px) {
-          font-size: 16px;
+          font-size: var(--h6);
         }
       }
     }

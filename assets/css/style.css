@@ -10,6 +10,12 @@
   --gradient: linear-gradient(131deg, #bb0dba 0%, #5c18dd 48.8%, #0099ad 100%);
   --white: #fff;
   --accent: #bb0dba;
+  --h1: 80px;
+  --h2: 48px;
+  --h3: 32px;
+  --h4: 20px;
+  --h5: 18px;
+  --h6: 16px;
 }
 
 .hero {
@@ -39,7 +45,7 @@
 }
 .hero__content-title {
   color: #fff;
-  font-size: 80px;
+  font-size: var(--h1);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
@@ -60,7 +66,7 @@
   display: block;
 }
 .hero__content-description {
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 300;
   max-width: 695px;
@@ -94,7 +100,7 @@
   .hero__content-link {
     width: 100px;
     height: 100px;
-    font-size: 16px;
+    font-size: var(--h6);
     font-style: normal;
     font-weight: 500;
     padding: 12px;
@@ -218,11 +224,11 @@
 .mobile__escape .escape__items .escape__item-title {
   text-transform: uppercase;
   text-align: center;
-  font-size: 32px;
+  font-size: var(--h3);
 }
 @media (max-width: 768px) {
   .mobile__escape .escape__items .escape__item-title {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 .mobile__escape .escape__items .escape__item-description {
@@ -232,7 +238,7 @@
 }
 @media (max-width: 768px) {
   .mobile__escape .escape__items .escape__item-description {
-    font-size: 16px;
+    font-size: var(--h6);
   }
 }
 
@@ -246,7 +252,7 @@
   align-items: center;
 }
 .banner__title {
-  font-size: 32px;
+  font-size: var(--h3);
 }
 @media (max-width: 1200px) {
   .banner__title {
@@ -376,12 +382,12 @@
 }
 .adventure__item-title {
   font-weight: 500;
-  font-size: 20px;
+  font-size: var(--h4);
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
   .adventure__item-title {
-    font-size: 16px;
+    font-size: var(--h6);
     padding-left: 15px;
   }
 }
@@ -465,7 +471,7 @@
 }
 @media (max-width: 556px) {
   .adventure.priority .adventure__item-title {
-    font-size: 16px;
+    font-size: var(--h6);
   }
 }
 
@@ -611,7 +617,7 @@
 }
 .works__content__item .step_number {
   color: #fff;
-  font-size: 80px;
+  font-size: var(--h1);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
@@ -624,11 +630,11 @@
 }
 @media (max-width: 556px) {
   .works__content__item .step_number {
-    font-size: 32px;
+    font-size: var(--h3);
   }
 }
 .works__content__item span {
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -637,7 +643,7 @@
 @media (max-width: 768px) {
   .works__content__item span {
     text-align: left;
-    font-size: 16px;
+    font-size: var(--h6);
   }
 }
 .works__content__item.active {
@@ -677,17 +683,17 @@
   }
 }
 .works__key-title, .works__info-title {
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 300;
 }
 @media (max-width: 768px) {
   .works__key-title, .works__info-title {
-    font-size: 16px;
+    font-size: var(--h6);
   }
 }
 .works__key-number, .works__info-number {
-  font-size: 48px;
+  font-size: var(--h2);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -695,7 +701,7 @@
 }
 @media (max-width: 768px) {
   .works__key-number, .works__info-number {
-    font-size: 32px;
+    font-size: var(--h3);
   }
 }
 .works__key-number sup, .works__info-number sup {
@@ -709,7 +715,7 @@
   }
 }
 .works__key-subtitle, .works__info-subtitle {
-  font-size: 16px;
+  font-size: var(--h6);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -854,7 +860,7 @@
 }
 @media (max-width: 768px) {
   .expriense__item-title {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 @media (max-width: 768px) {
@@ -945,7 +951,7 @@
   width: 100%;
 }
 .expriense__video__bottom span {
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 300;
   color: #bbb6c0;
@@ -957,7 +963,7 @@
 }
 @media (max-width: 768px) {
   .expriense__video__bottom span {
-    font-size: 16px;
+    font-size: var(--h6);
     line-height: 160%;
   }
 }
@@ -968,7 +974,7 @@
   }
 }
 .expriense__video-title {
-  font-size: 16px;
+  font-size: var(--h6);
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
@@ -1071,7 +1077,7 @@
   }
 }
 .testimonial .testimonial__text {
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 300;
   color: #bbb6c0;
@@ -1083,7 +1089,7 @@
 }
 @media (max-width: 556px) {
   .testimonial .testimonial__text {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 .testimonial .testimonial__footer {
@@ -1120,7 +1126,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
+  font-size: var(--h2);
   font-style: normal;
   font-weight: 500;
 }
@@ -1129,14 +1135,14 @@
   flex-direction: column;
 }
 .testimonial .testimonial__name {
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
   text-transform: uppercase;
 }
 .testimonial .testimonial__role {
-  font-size: 16px;
+  font-size: var(--h6);
   font-style: normal;
   font-weight: 300;
   line-height: 160%;
@@ -1144,7 +1150,7 @@
 }
 .testimonial .testimonial__stars {
   color: #ff00ff;
-  font-size: 16px;
+  font-size: var(--h6);
 }
 .testimonial .swiper-pagination-progressbar {
   height: 4px;
@@ -1212,7 +1218,7 @@
 }
 @media (max-width: 768px) {
   .service .escape__item-title {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 
@@ -1286,7 +1292,7 @@
 }
 .additional__item-title {
   text-align: center;
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -1304,7 +1310,7 @@
 }
 @media (max-width: 768px) {
   .additional__item-title {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 
@@ -1324,7 +1330,7 @@
 .booking__title {
   text-align: center;
   color: #fff;
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -1391,7 +1397,7 @@
 }
 .booking__item-title {
   text-align: center;
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
@@ -1403,7 +1409,7 @@
 }
 @media (max-width: 768px) {
   .booking__item-title {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 @media (max-width: 556px) {
@@ -1427,7 +1433,7 @@
 }
 @media (max-width: 768px) {
   .booking__item-number {
-    font-size: 80px;
+    font-size: var(--h1);
   }
 }
 
@@ -1487,7 +1493,7 @@
   width: 100%;
   height: 110px;
   color: #bbb6c0;
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -1550,7 +1556,7 @@
   }
 }
 .packages__item-logo h2 {
-  font-size: 80px;
+  font-size: var(--h1);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
@@ -1589,7 +1595,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 300;
 }
@@ -1635,7 +1641,7 @@
   }
 }
 .packages__item-price span {
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 500;
   text-align: right;
@@ -1643,7 +1649,7 @@
 }
 @media (max-width: 768px) {
   .packages__item-price span {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 .packages__link {
@@ -1671,18 +1677,18 @@
 }
 @media (max-width: 768px) {
   .packages__info-title {
-    font-size: 16px;
+    font-size: var(--h6);
   }
 }
 .packages__info p {
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
   .packages__info p {
-    font-size: 16px;
+    font-size: var(--h6);
   }
 }
 
@@ -1740,7 +1746,7 @@
   -webkit-text-fill-color: transparent;
   background-color: white;
   text-align: center;
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -1748,11 +1754,11 @@
 }
 @media (max-width: 665px) {
   .contact__banner-top span {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 .contact__banner-title {
-  font-size: 80px;
+  font-size: var(--h1);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
@@ -1862,7 +1868,7 @@
   border: 2px solid #fff;
   color: #fff;
   text-align: center;
-  font-size: 20px;
+  font-size: var(--h4);
   font-weight: 500;
   line-height: 130%;
   text-transform: uppercase;
@@ -1920,7 +1926,7 @@
 }
 .contact__content__left-title {
   color: #fff;
-  font-size: 16px;
+  font-size: var(--h6);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -1955,7 +1961,7 @@
   align-items: flex-start;
   gap: 15px;
   color: #fff;
-  font-size: 32px;
+  font-size: var(--h3);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -1986,7 +1992,7 @@
 }
 @media (max-width: 768px) {
   .contact__content__items li a span {
-    font-size: 20px;
+    font-size: var(--h4);
     word-break: break-all;
   }
 }
@@ -2045,7 +2051,7 @@
 body {
   color: #fff;
   font-family: "Poppins";
-  font-size: 20px;
+  font-size: var(--h4);
   font-style: normal;
   font-weight: 500;
 }
@@ -2083,7 +2089,7 @@ body {
 }
 .component__top-title {
   text-align: center;
-  font-size: 48px;
+  font-size: var(--h2);
   line-height: 130%;
   font-weight: 500;
   text-transform: uppercase;
@@ -2095,12 +2101,12 @@ body {
 }
 @media (max-width: 768px) {
   .component__top-title {
-    font-size: 32px;
+    font-size: var(--h3);
   }
 }
 .component__top-description {
   text-align: center;
-  font-size: 32px;
+  font-size: var(--h3);
   font-weight: 300;
 }
 @media (max-width: 1200px) {
@@ -2110,7 +2116,7 @@ body {
 }
 @media (max-width: 768px) {
   .component__top-description {
-    font-size: 20px;
+    font-size: var(--h4);
   }
 }
 
@@ -2133,7 +2139,7 @@ body {
 .escape__item-title {
   text-transform: uppercase;
   text-align: center;
-  font-size: 32px;
+  font-size: var(--h3);
 }
 .escape__item-description {
   font-weight: 300;
@@ -2261,7 +2267,7 @@ body {
   padding-right: 45px;
   border-radius: 60px;
   color: white;
-  font-size: 16px;
+  font-size: var(--h6);
   appearance: none;
   cursor: pointer;
   width: 100%;
@@ -2366,7 +2372,7 @@ body {
 }
 .modal_title {
   color: #fff;
-  font-size: 48px;
+  font-size: var(--h2);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;

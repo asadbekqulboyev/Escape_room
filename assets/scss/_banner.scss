@@ -12,7 +12,7 @@
     align-items: center;
   }
   &__title {
-    font-size: 32px;
+    font-size: var(--h3);
     @media (max-width: 1200px) {
       font-size: 24px;
     }

@@ -9,7 +9,7 @@
   &__title {
     text-align: center;
     color: #fff;
-    font-size: 32px;
+    font-size: var(--h3);
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
@@ -65,7 +65,7 @@
     }
     &-title {
       text-align: center;
-      font-size: 32px;
+      font-size: var(--h3);
       font-style: normal;
       font-weight: 500;
 
@@ -74,7 +74,7 @@
         font-size: 26px;
       }
       @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: var(--h4);
       }
       @media (max-width: 556px) {
         font-size: 17px;
@@ -92,7 +92,7 @@
         font-size: 180px;
       }
       @media (max-width: 768px) {
-        font-size: 80px;
+        font-size: var(--h1);
       }
     }
   }

@@ -65,10 +65,10 @@
     }
     &-title {
       font-weight: 500;
-      font-size: 20px;
+      font-size: var(--h4);
       text-transform: uppercase;
       @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: var(--h6);
         padding-left: 15px;
       }
 
@@ -132,7 +132,7 @@
       }
       &-title {
         @media (max-width: 556px) {
-          font-size: 16px;
+          font-size: var(--h6);
         }
       }
     }
