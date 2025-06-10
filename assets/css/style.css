@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --x: 0%;
+  --gradient: linear-gradient(131deg, #bb0dba 0%, #5c18dd 48.8%, #0099ad 100%);
+  --white: #fff;
+  --accent: #bb0dba;
+}
+
 .hero {
   position: relative;
   line-height: 0;
@@ -61,7 +68,7 @@
 }
 .hero__content-link {
   display: flex;
-  background: linear-gradient(121deg, #bb0dba 0%, #5c18dd 48.8%, #0099ad 125%);
+  background: var(--gradient) var(--x, 0)/400% !important;
   color: #fff;
   font-weight: 500;
   width: 200px;
@@ -72,6 +79,9 @@
   transition: all 0.2s ease;
   border-radius: 50%;
   margin-top: 50px;
+}
+.hero__content-link:hover {
+  --x: 100%;
 }
 @media (max-width: 1400px) {
   .hero__content-link {
@@ -227,7 +237,7 @@
 }
 
 .banner {
-  background: linear-gradient(94deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
+  background: linear-gradient(94deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   padding: 10px 0;
 }
 .banner .container {
@@ -376,7 +386,7 @@
   }
 }
 .adventure__item-title span {
-  color: #bb0dba;
+  color: var(--accent);
 }
 .adventure.priority {
   padding: 100px 24px;
@@ -976,7 +986,7 @@
 }
 .expriense__btn {
   border-radius: 60px;
-  border: 2px solid #bb0dba;
+  border: 2px solid var(--accent);
   color: #fff;
   padding: 30px;
   display: block;
@@ -1105,7 +1115,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(94deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
+  background: linear-gradient(94deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   color: #fff;
   display: flex;
   align-items: center;
@@ -1172,7 +1182,7 @@
   }
 }
 .service__items .escape__item-title span {
-  color: #bb0dba;
+  color: var(--accent);
 }
 @media (max-width: 1200px) {
   .service .escape__item {
@@ -1686,7 +1696,7 @@
 }
 .contact__banner {
   border-radius: 20px;
-  background: linear-gradient(94deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
+  background: linear-gradient(94deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   padding: 100px;
   display: flex;
   justify-content: space-between;
@@ -1704,7 +1714,7 @@
   .contact__banner {
     padding: 24px 15px;
     border-radius: 12px;
-    background: linear-gradient(169deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
+    background: linear-gradient(169deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   }
 }
 .contact__banner-top {
@@ -1724,7 +1734,7 @@
   }
 }
 .contact__banner-top span {
-  background: linear-gradient(94deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
+  background: linear-gradient(94deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1857,6 +1867,11 @@
   line-height: 130%;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.2s linear;
+}
+.contact__link a:hover {
+  background: var(--white);
+  color: var(--accent);
 }
 @media (max-width: 1200px) {
   .contact__link a {
@@ -1964,7 +1979,7 @@
   text-decoration: none;
 }
 .contact__content__items li a span {
-  background: linear-gradient(94deg, #bb0dba 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
+  background: linear-gradient(94deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2063,7 +2078,7 @@ body {
   gap: 10px;
   border-radius: 50%;
   background: rgba(172, 20, 171, 0.1);
-  color: #bb0dba;
+  color: var(--accent);
   font-weight: 300;
 }
 .component__top-title {
@@ -2175,7 +2190,7 @@ body {
 }
 .modal_content {
   border-radius: 20px;
-  border: 4px solid #bb0dba;
+  border: 4px solid var(--accent);
   background: #110f1a;
   margin: auto;
   width: 100%;
