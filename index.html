@@ -1,950 +1,810 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <main>
-        <!-- hero -->
-        <section class="hero">
-          <img src="assets/images/hero.png" alt="" class="hero__bg" />
-          <div class="container">
-            <div class="hero__content">
-              <h1 class="hero__content-title">
-                <span>An Escape Room</span>
-                That Comes to You!
-              </h1>
-              <p class="hero__content-description">
-                A mobile escape room inside a stylish trailer. Two teams, 30
-                minutes, tons of excitement. Perfect for corporate events,
-                parties, and graduations!
-              </p>
-              <a href="#" class="hero__content-link open_modal">Book Now</a>
-            </div>
-            <div class="hero__videos">
-              <img
-                src="assets/images/play.svg"
-                alt=""
-                class="hero__videos-play play"
-              />
-              <video
-                src="assets/videos/ESCAPE.mp4"
-                class="hero__videos-video"
-                id="video"
-                controls
-                poster="assets/images/hero_video.png"
-              ></video>
 
-              <div class="hero__videos-title">See How It Works</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptex Escape Game - escape room in Branson, Missouri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <!-- hero -->
+      <section class="hero">
+        <img src="assets/images/hero.png" alt="" class="hero__bg" />
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__content-title">
+              <span>An Escape Room</span>
+              That Comes to You!
+            </h1>
+            <p class="hero__content-description">
+              A mobile escape room inside a stylish trailer. Two teams, 30
+              minutes, tons of excitement. Perfect for corporate events,
+              parties, and graduations!
+            </p>
+            <a href="#" class="hero__content-link open_modal">Book Now</a>
+          </div>
+          <div class="hero__videos">
+            <img src="assets/images/play.svg" alt="" class="hero__videos-play play" />
+            <video src="assets/videos/ESCAPE.mp4" class="hero__videos-video" id="video" controls
+              poster="assets/images/hero_video.png"></video>
+
+            <div class="hero__videos-title">See How It Works</div>
+          </div>
+        </div>
+      </section>
+      <div class="main_bg">
+        <!-- mobile_escape -->
+        <section class="mobile__escape">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">02</div>
+              <h2 class="component__top-title">
+                What’s a Mobile Escape Room?
+              </h2>
+            </div>
+            <div class="escape__items">
+              <div class="escape__item">
+                <img src="assets/images/escape1.svg" alt="" />
+                <div class="escape__body">
+                  <div class="escape__item-title">We come to you!</div>
+                  <div class="escape__item-description">
+                    Two parallel games inside the trailer
+                  </div>
+                </div>
+              </div>
+              <div class="escape__item">
+                <img src="assets/images/escape2.svg" alt="" />
+                <div class="escape__body">
+                  <div class="escape__item-title">
+                    30 minutes of challenge
+                  </div>
+                  <div class="escape__item-description">
+                    Dive into puzzles and teamwork
+                  </div>
+                </div>
+              </div>
+              <div class="escape__item">
+                <img src="assets/images/escape3.svg" alt="" />
+                <div class="escape__body">
+                  <div class="escape__item-title">
+                    Up to 16 players at once
+                  </div>
+                  <div class="escape__item-description">
+                    Great for events of any size
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <div class="main_bg">
-          <!-- mobile_escape -->
-          <section class="mobile__escape">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">02</div>
-                <h2 class="component__top-title">
-                  What’s a Mobile Escape Room?
-                </h2>
-              </div>
-              <div class="escape__items">
-                <div class="escape__item">
-                  <img src="assets/images/escape1.svg" alt="" />
-                  <div class="escape__body">
-                    <div class="escape__item-title">We come to you!</div>
-                    <div class="escape__item-description">
-                      Two parallel games inside the trailer
-                    </div>
-                  </div>
-                </div>
-                <div class="escape__item">
-                  <img src="assets/images/escape2.svg" alt="" />
-                  <div class="escape__body">
-                    <div class="escape__item-title">
-                      30 minutes of challenge
-                    </div>
-                    <div class="escape__item-description">
-                      Dive into puzzles and teamwork
-                    </div>
-                  </div>
-                </div>
-                <div class="escape__item">
-                  <img src="assets/images/escape3.svg" alt="" />
-                  <div class="escape__body">
-                    <div class="escape__item-title">
-                      Up to 16 players at once
-                    </div>
-                    <div class="escape__item-description">
-                      Great for events of any size
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- banner -->
-          <div class="banner">
-            <div class="container">
-              <span class="banner__title"
-                >AN ESCAPE ROOM THAT COMES TO YOU!</span
-              >
-              <div class="banner__links">
-                <span class="banner_subtitle">You can order it right now</span>
-                <a href="#" class="banner_btn">BOOK NOW</a>
-              </div>
+        <!-- banner -->
+        <div class="banner">
+          <div class="container">
+            <span class="banner__title">AN ESCAPE ROOM THAT COMES TO YOU!</span>
+            <div class="banner__links">
+              <span class="banner_subtitle">You can order it right now</span>
+              <a href="#" class="banner_btn">BOOK NOW</a>
             </div>
           </div>
-          <!-- adventure -->
-          <section class="adventure">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">03</div>
-                <h2 class="component__top-title">
-                  What’s a Mobile Escape Room?
-                </h2>
-                <p class="component__top-description">
-                  Host a unique experience — without leaving your location!
-                </p>
-              </div>
-              <div class="adventure__items">
-                <div class="adventure__item">
-                  <img src="assets/images/advanture1.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Corporate events <span>&</span> team building
-                  </h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/advanture2.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Graduations <span>&</span> students
-                  </h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/advanture3.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Church <span>&</span> youth groups
-                  </h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/advanture4.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Birthdays <span>&</span> family parties
-                  </h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/advanture5.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Date night <span>&</span> couples’ challenges
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- works -->
-          <section class="works">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">04</div>
-                <h2 class="component__top-title">How It All Works</h2>
-              </div>
-              <div class="works__content">
-                <div class="scrollbar">
-                  <div class="scrollbar_thumb"></div>
-                </div>
-                <ul class="works__content__items">
-                  <li class="works__content__item active">
-                    <span>
-                      Each group plays a unique scenario in the trailer
-                    </span>
-                    <div class="step_number">02</div>
-                  </li>
-                  <li class="works__content__item active">
-                    <div class="step_number">01</div>
-                    <span> Team splits into 2 groups </span>
-                  </li>
-                  <li class="works__content__item">
-                    <span> Guided by a professional game master </span>
-                    <div class="step_number">04</div>
-                  </li>
-                  <li class="works__content__item">
-                    <div class="step_number">03</div>
-                    <span>
-                      Puzzles, secret compartments, and story-driven gameplay
-                    </span>
-                  </li>
-                  <li class="works__content__item">
-                    <span> Guided by a professional game master </span>
-                    <div class="step_number">06</div>
-                  </li>
-                  <li class="works__content__item">
-                    <div class="step_number">05</div>
-                    <span> The fastest team wins! </span>
-                  </li>
-                  <li class="works__content__item">
-                    <span>
-                      Puzzles, secret compartments, and story-driven gameplay
-                    </span>
-                    <div class="step_number">08</div>
-                  </li>
-                  <li class="works__content__item">
-                    <span>
-                      Puzzles, secret compartments, and story-driven gameplay
-                    </span>
-                    <div class="step_number">07</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section class="works__keys">
-            <div class="container">
-              <div class="works__key">
-                <img src="assets/images/advanture2.svg" alt="" />
-                <div class="works__key__info">
-                  <div class="works__key-title">Duration</div>
-                  <div class="works__key-number">30</div>
-                  <div class="works__key-subtitle">minutes</div>
-                </div>
-              </div>
-              <div class="works__key">
-                <img src="assets/images/advanture3.svg" alt="" />
-                <div class="works__key__info">
-                  <div class="works__key-title">Participants:</div>
-                  <div class="works__key-number"><sup>Up to</sup> 16</div>
-                  <div class="works__key-subtitle">minutes</div>
-                </div>
-              </div>
-              <div class="works__right">
-                <img
-                  src="assets/images/escape1.svg"
-                  alt=""
-                  class="works__desctop_none"
-                />
-                <div class="works__icons">
-                  <img src="assets/images/key_icon1.svg" alt="" />
-                  <img src="assets/images/key_icon2.svg" alt="" />
-                  <img src="assets/images/key_icon3.svg" alt="" />
-                </div>
-                <div class="works__info">
-                  <div class="works__info-title">Difficulty:</div>
-                  <div class="works__info-number">Family-friendly</div>
-                  <div class="works__info-subtitle">medium level</div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="expriense">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">05</div>
-                <h2 class="component__top-title">
-                  Why People Love Our Experience
-                </h2>
-              </div>
-              <div class="expriense__items">
-                <div class="expriense__item">
-                  <img
-                    src="assets/images/expriens_icon1.svg"
-                    class="expriense__item-img"
-                  />
-                  <h3 class="expriense__item-title">
-                    Two teams play head-to-head
-                  </h3>
-                </div>
-                <div class="expriense__item">
-                  <img
-                    src="assets/images/expriens_icon2.svg"
-                    class="expriense__item-img"
-                  />
-                  <h3 class="expriense__item-title">
-                    All equipment is inside our trailer
-                  </h3>
-                </div>
-                <div class="expriense__item">
-                  <img
-                    src="assets/images/expriens_icon3.svg"
-                    class="expriense__item-img"
-                  />
-                  <h3 class="expriense__item-title">Instant group switching</h3>
-                </div>
-                <div class="expriense__item">
-                  <img
-                    src="assets/images/expriens_icon4.svg"
-                    class="expriense__item-img"
-                  />
-                  <h3 class="expriense__item-title">
-                    Professional hosting and support
-                  </h3>
-                </div>
-                <div class="expriense__item">
-                  <img
-                    src="assets/images/expriens_icon5.svg"
-                    class="expriense__item-img"
-                  />
-                  <h3 class="expriense__item-title">
-                    Customizable for any type of event
-                  </h3>
-                </div>
-              </div>
-              <div class="expriense__videos">
-                <div class="expriense__video">
-                  <div class="expriense__video_content">
-                    <img src="assets/images/play.svg" alt="" class="play" />
-                    <video
-                      src="assets/videos/room.mp4"
-                      poster="assets/images/expriense_img1.png"
-                      controls
-                    ></video>
-                  </div>
-                  <div class="expriense__video__bottom">
-                    <a href="#" class="expriense__video-logo">
-                      <img src="assets/images/video_logo1.png" alt="" />
-                    </a>
-                    <div class="expriense__video__bottom-info">
-                      <span>“It was way better than we expected!”</span>
-                      <div class="expriense__video-title">
-                        HR Manager, XYZ Company
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="expriense__video">
-                  <div class="expriense__video_content">
-                    <img src="assets/images/play.svg" alt="" class="play" />
-                    <video
-                      src="assets/videos/room.mp4"
-                      poster="assets/images/expriense_img2.png"
-                      controls
-                    ></video>
-                  </div>
-                  <div class="expriense__video__bottom">
-                    <a href="#" class="expriense__video-logo">
-                      <img src="assets/images/video_logo2.png" alt="" />
-                    </a>
-                    <div class="expriense__video__bottom-info">
-                      <span>“It was way better than we expected!”</span>
-                      <div class="expriense__video-title">
-                        HR Manager, XYZ Company
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="expriense__video">
-                  <div class="expriense__video_content">
-                    <img src="assets/images/play.svg" alt="" class="play" />
-                    <video
-                      src="assets/videos/room.mp4"
-                      poster="assets/images/expriense_img3.png"
-                      controls
-                    ></video>
-                  </div>
-                  <div class="expriense__video__bottom">
-                    <div class="expriense__video__bottom-info">
-                      <span>“It was way better than we expected!”</span>
-                      <div class="expriense__video-title">
-                        HR Manager, XYZ Company
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="expriense__btn">View more</a>
-            </div>
-
-            <div class="testimonial">
-              <div class="swiper testimonial__slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide testimonial__item">
-                    <p class="testimonial__text">
-                      “It was way better than we expected!”
-                    </p>
-                    <div class="testimonial__footer">
-                      <div class="testimonial__user">
-                        <div class="testimonial__avatar">N</div>
-                        <div class="testimonial__info">
-                          <div class="testimonial__name">XYZ COMPANY</div>
-                          <div class="testimonial__role">HR Manager</div>
-                        </div>
-                      </div>
-                      <div class="testimonial__stars">
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide testimonial__item">
-                    <p class="testimonial__text">
-                      “It was way better than we expected!”
-                    </p>
-                    <div class="testimonial__footer">
-                      <div class="testimonial__user">
-                        <img
-                          src="https://i.pravatar.cc/40?img=3"
-                          class="testimonial__avatar"
-                        />
-                        <div class="testimonial__info">
-                          <div class="testimonial__name">NAME</div>
-                          <div class="testimonial__role">about bit</div>
-                        </div>
-                      </div>
-                      <div class="testimonial__stars">
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide testimonial__item">
-                    <p class="testimonial__text">
-                      “It was way better than we expected!”
-                    </p>
-                    <div class="testimonial__footer">
-                      <div class="testimonial__user">
-                        <div class="testimonial__avatar">N</div>
-                        <div class="testimonial__info">
-                          <div class="testimonial__name">NAME</div>
-                          <div class="testimonial__role">about bit</div>
-                        </div>
-                      </div>
-                      <div class="testimonial__stars">
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide testimonial__item">
-                    <p class="testimonial__text">
-                      “It was way better than we expected!”
-                    </p>
-                    <div class="testimonial__footer">
-                      <div class="testimonial__user">
-                        <img
-                          src="https://i.pravatar.cc/40?img=5"
-                          class="testimonial__avatar"
-                        />
-                        <div class="testimonial__info">
-                          <div class="testimonial__name">NAME</div>
-                          <div class="testimonial__role">about bit</div>
-                        </div>
-                      </div>
-                      <div class="testimonial__stars">
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide testimonial__item">
-                    <p class="testimonial__text">
-                      “It was way better than we expected!”
-                    </p>
-                    <div class="testimonial__footer">
-                      <div class="testimonial__user">
-                        <img
-                          src="https://i.pravatar.cc/40?img=5"
-                          class="testimonial__avatar"
-                        />
-                        <div class="testimonial__info">
-                          <div class="testimonial__name">NAME</div>
-                          <div class="testimonial__role">about bit</div>
-                        </div>
-                      </div>
-                      <div class="testimonial__stars">
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                        <img src="assets/images/star.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </section>
-          <section class="packages">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">06</div>
-                <h2 class="component__top-title">
-                  Flexible Packages for Any Occasion
-                </h2>
-                <div class="packages__content">
-                  <div class="packages__header">
-                    <div class="packages__header-item">Package</div>
-                    <div class="packages__header-item">Description</div>
-                    <div class="packages__header-item">Price</div>
-                  </div>
-                  <div class="packages__items">
-                    <div class="packages__item">
-                      <div class="packages__item-logo">
-                        <img src="assets/images/package_icon1.svg" alt="" />
-                        <h2>Standard</h2>
-                      </div>
-                      <div class="packages__item-text">
-                        <div class="mobile__show">Description</div>
-                        <span> 2 hours of gameplay, up to 4 rounds</span>
-                      </div>
-                      <div class="packages__item-price">
-                        <h4 class="mobile__show">Price</h4>
-                        <span>from $700</span>
-                      </div>
-                    </div>
-                    <div class="packages__item">
-                      <div class="packages__item-logo">
-                        <img src="assets/images/package_icon2.svg" alt="" />
-                        <h2>Corporate</h2>
-                      </div>
-                      <div class="packages__item-text">
-                        <div class="mobile__show">Description</div>
-                        <span>Branding, custom challenges, up to 6 rounds</span>
-                      </div>
-                      <div class="packages__item-price">
-                        <h4 class="mobile__show">Price</h4>
-                        <span>upon request</span>
-                      </div>
-                    </div>
-                    <div class="packages__item">
-                      <div class="packages__item-logo">
-                        <img src="assets/images/package_icon3.svg" alt="" />
-                        <h2>Party</h2>
-                      </div>
-                      <div class="packages__item-text">
-                        <div class="mobile__show">Description</div>
-                        <span>Ideal for birthdays, graduations</span>
-                      </div>
-                      <div class="packages__item-price">
-                        <h4 class="mobile__show">Price</h4>
-                        <span>upon request</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" class="packages__link">
-                  <img src="assets/images/booking4.svg" alt="" />
-                  <div class="packages__info">
-                    <div class="packages__info-title">Payment:</div>
-                    <p class="packages__info-text">
-                      credit card, online options
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </section>
-          <section class="service">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">07</div>
-                <h2 class="component__top-title">We Come to You</h2>
-              </div>
-              <div class="service__items">
-                <div class="escape__item">
-                  <img src="assets/images/service1.svg" alt="" />
-                  <div class="escape__body">
-                    <div class="escape__item-title">
-                      Serving a 50-mile <span>radius from Branson</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="escape__item">
-                  <img src="assets/images/service2.svg" alt="" />
-                  <div class="escape__body">
-                    <div class="escape__item-title">
-                      Longer travel? <br />
-                      <span>Let’s talk!</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="booking">
-                <div class="booking__title">How to Book:</div>
-                <div class="booking__items">
-                  <div class="booking__item">
-                    <div class="booking__item_top">
-                      <img
-                        src="assets/images/booking1.svg"
-                        alt=""
-                        class="booking__item-img"
-                      />
-                      <h4 class="booking__item-title">
-                        Through website, phone, or email
-                      </h4>
-                    </div>
-                    <div class="booking__item-number">01</div>
-                  </div>
-                  <div class="booking__item">
-                    <div class="booking__item_top">
-                      <img
-                        src="assets/images/booking2.svg"
-                        alt=""
-                        class="booking__item-img"
-                      />
-                      <h4 class="booking__item-title">
-                        Deposit confirms your booking
-                      </h4>
-                    </div>
-                    <div class="booking__item-number">02</div>
-                  </div>
-                  <div class="booking__item">
-                    <div class="booking__item_top">
-                      <img
-                        src="assets/images/booking3.png"
-                        alt=""
-                        class="booking__item-img"
-                      />
-                      <h4 class="booking__item-title">
-                        We finalize all details a few days before the event
-                      </h4>
-                    </div>
-                    <div class="booking__item-number">03</div>
-                  </div>
-                  <div class="booking__item">
-                    <div class="booking__item_top">
-                      <img
-                        src="assets/images/booking4.svg"
-                        alt=""
-                        class="booking__item-img"
-                      />
-                      <h4 class="booking__item-title">Request a Booking</h4>
-                    </div>
-                    <div class="booking__item-number">04</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="adventure priority">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">08</div>
-                <h2 class="component__top-title">
-                  Your Safety Is Our Priority
-                </h2>
-              </div>
-              <div class="adventure__items">
-                <div class="adventure__item">
-                  <img src="assets/images/priority_img1.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Game master <br />
-                    monitors the <br />
-                    experience
-                  </h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/priority_img2.svg" alt="" />
-                  <h2 class="adventure__item-title">All props are sanitized</h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/priority_img3.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Emergency exits <br />
-                    onboard
-                  </h2>
-                </div>
-                <div class="adventure__item">
-                  <img src="assets/images/priority_img4.svg" alt="" />
-                  <h2 class="adventure__item-title">
-                    Equipment meets all <br />
-                    safety standards
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="additional">
-            <div class="container">
-              <div class="component__top">
-                <div class="component__top-number">09</div>
-                <h2 class="component__top-title">
-                  Want More? We've Got You Covered
-                </h2>
-              </div>
-              <div class="additional__items">
-                <div class="additional__item">
-                  <img
-                    src="assets/images/additional__img1.png"
-                    alt=""
-                    class="additional__item-img"
-                  />
-                  <div class="additional__item-title">
-                    Photo & video packages
-                  </div>
-                </div>
-                <div class="additional__item">
-                  <img
-                    src="assets/images/additional__img2.png"
-                    alt=""
-                    class="additional__item-img"
-                  />
-                  <div class="additional__item-title">
-                    Themed costumes & decor
-                  </div>
-                </div>
-                <div class="additional__item">
-                  <img
-                    src="assets/images/additional__img3.png"
-                    alt=""
-                    class="additional__item-img"
-                  />
-                  <div class="additional__item-title">
-                    Catering coordination
-                  </div>
-                </div>
-                <div class="additional__item">
-                  <img
-                    src="assets/images/additional__img4.png"
-                    alt=""
-                    class="additional__item-img"
-                  />
-                  <div class="additional__item-title">
-                    Custom event branding
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="contact">
-            <div class="container">
-              <div class="contact__banner">
-                <div class="contact__banner-left">
-                  <div class="contact__banner-top">
-                    <span>Ready for an Adventure?</span>
-                  </div>
-                  <div class="contact__banner-title">
-                    Contact us, and we’ll bring the escape room to your
-                    doorstep!
-                  </div>
-                </div>
-                <div class="contact__link">
-                  <img src="assets/images/contact_arrow.svg" alt="" />
-                  <img src="assets/images/contact_arrow2.svg" alt="" />
-                  <img src="assets/images/contact_arrow3.svg" alt="" />
-                  <img src="assets/images/contact_arrow4.svg" alt="" />
-                  <a href="#" class="open_modal">Book Now</a>
-                </div>
-              </div>
-              <div class="contact__content">
-                <div class="contact__content__left">
-                  <div class="contact__content_top">
-                    <div class="contact__content__left-title">COME SEE US</div>
-                    <ul class="contact__content__items">
-                      <li>
-                        <img src="assets/images/contact1.svg" alt="" />
-                        <span
-                          >1819 West HWY 76 <br />
-                          Branson, MO</span
-                        >
-                      </li>
-                      <li>
-                        <a href="mailto:cryptexbranson@gmail.com">
-                          <img src="assets/images/contact2.svg" alt="" />
-                          <span>cryptexbranson@gmail.com</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="tel:4173206263">
-                          <img src="assets/images/contact3.svg" alt="" />
-                          <span>(417) 320-6263</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="contact__content_bottom">
-                    <ul class="contact__content__items">
-                      <span class="contact__content__left-title"
-                        >HOURS OF OPERATION</span
-                      >
-                      <li>
-                        <img src="assets/images/contact4.svg" alt="" />
-                        <span>Mon - Sat:</span>
-                        <span>9AM - 9PM</span>
-                      </li>
-                      <li>
-                        <img src="assets/images/contact4.svg" alt="" />
-                        <span>Sun:</span>
-                        <span>10AM - 6PM</span>
-                      </li>
-                    </ul>
-                    <ul class="contact__content__social-lists">
-                      <span class="contact__content__left-title"
-                        >HOURS OF OPERATION</span
-                      >
-                      <li>
-                        <a href="#"
-                          ><img src="assets/images/social1.svg" alt=""
-                        /></a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><img src="assets/images/social2.svg" alt=""
-                        /></a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><img src="assets/images/social3.svg" alt=""
-                        /></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="map -home-map">
-                  <iframe
-                    width="100%"
-                    max-width="700px"
-                    height="100%"
-                    style="border: 0"
-                    title="We are here"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4527.383539140278!2d-93.25151135207456!3d36.64218373056704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf0350539e088f%3A0x3d88c09b4777b3d4!2sCryptex%20Branson%20Escape%20Rooms!5e0!3m2!1sru!2sru!4v1693414679261!5m2!1sru!2sru"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
-      </main>
-    </div>
-    <div class="modal_order">
-      <div class="modal">
-        <form class="modal_content">
-          <div class="modal_header">
-            <h2 class="modal_title">
-              pre-order of An Escape Room <span>That Comes to You!</span>
-            </h2>
-            <div class="exit_modal">
-              <img src="assets/images/close.svg" alt="" />
+        <!-- adventure -->
+        <section class="adventure">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">03</div>
+              <h2 class="component__top-title">
+                What’s a Mobile Escape Room?
+              </h2>
+              <p class="component__top-description">
+                Host a unique experience — without leaving your location!
+              </p>
+            </div>
+            <div class="adventure__items">
+              <div class="adventure__item">
+                <img src="assets/images/advanture1.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Corporate events <span>&</span> team building
+                </h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/advanture2.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Graduations <span>&</span> students
+                </h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/advanture3.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Church <span>&</span> youth groups
+                </h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/advanture4.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Birthdays <span>&</span> family parties
+                </h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/advanture5.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Date night <span>&</span> couples’ challenges
+                </h2>
+              </div>
             </div>
           </div>
-          <div class="modal_content_items">
-            <label>
-              <span>FIRST NAME*</span>
-              <input type="text" placeholder="Ваше имя" name="first_name" />
-            </label>
-            <label>
-              <span>TELEPHONE*</span>
-              <input
-                type="tel"
-                placeholder="Ваш телефон"
-                id="phone_input"
-                name="phone"
-                class="phone_input"
-              />
-            </label>
-          </div>
-          <div class="booking_form">
-            <div class="input_group">
-              <div class="input_box">
-                <input
-                  type="date"
-                  id="datePicker"
-                  placeholder="tue sep 12, 2025"
-                />
-                <span class="icon">
-                  <!-- Kalendar ikonkasi -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M7 10H17V12H7V10ZM7 14H14V16H7V14ZM19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 
-                    21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20Z"
-                      fill="white"
-                    />
-                  </svg>
-                </span>
+        </section>
+        <!-- works -->
+        <section class="works">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">04</div>
+              <h2 class="component__top-title">How It All Works</h2>
+            </div>
+            <div class="works__content">
+              <div class="scrollbar">
+                <div class="scrollbar_thumb"></div>
               </div>
+              <ul class="works__content__items">
+                <li class="works__content__item active">
+                  <span>
+                    Each group plays a unique scenario in the trailer
+                  </span>
+                  <div class="step_number">02</div>
+                </li>
+                <li class="works__content__item active">
+                  <div class="step_number">01</div>
+                  <span> Team splits into 2 groups </span>
+                </li>
+                <li class="works__content__item">
+                  <span> Guided by a professional game master </span>
+                  <div class="step_number">04</div>
+                </li>
+                <li class="works__content__item">
+                  <div class="step_number">03</div>
+                  <span>
+                    Puzzles, secret compartments, and story-driven gameplay
+                  </span>
+                </li>
+                <li class="works__content__item">
+                  <span> Guided by a professional game master </span>
+                  <div class="step_number">06</div>
+                </li>
+                <li class="works__content__item">
+                  <div class="step_number">05</div>
+                  <span> The fastest team wins! </span>
+                </li>
+                <li class="works__content__item">
+                  <span>
+                    Puzzles, secret compartments, and story-driven gameplay
+                  </span>
+                  <div class="step_number">08</div>
+                </li>
+                <li class="works__content__item">
+                  <span>
+                    Puzzles, secret compartments, and story-driven gameplay
+                  </span>
+                  <div class="step_number">07</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="works__keys">
+          <div class="container">
+            <div class="works__key">
+              <img src="assets/images/advanture2.svg" alt="" />
+              <div class="works__key__info">
+                <div class="works__key-title">Duration</div>
+                <div class="works__key-number">30</div>
+                <div class="works__key-subtitle">minutes</div>
+              </div>
+            </div>
+            <div class="works__key">
+              <img src="assets/images/advanture3.svg" alt="" />
+              <div class="works__key__info">
+                <div class="works__key-title">Participants:</div>
+                <div class="works__key-number"><sup>Up to</sup> 16</div>
+                <div class="works__key-subtitle">minutes</div>
+              </div>
+            </div>
+            <div class="works__right">
+              <img src="assets/images/escape1.svg" alt="" class="works__desctop_none" />
+              <div class="works__icons">
+                <img src="assets/images/key_icon1.svg" alt="" />
+                <img src="assets/images/key_icon2.svg" alt="" />
+                <img src="assets/images/key_icon3.svg" alt="" />
+              </div>
+              <div class="works__info">
+                <div class="works__info-title">Difficulty:</div>
+                <div class="works__info-number">Family-friendly</div>
+                <div class="works__info-subtitle">medium level</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="expriense">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">05</div>
+              <h2 class="component__top-title">
+                Why People Love Our Experience
+              </h2>
+            </div>
+            <div class="expriense__items">
+              <div class="expriense__item">
+                <img src="assets/images/expriens_icon1.svg" class="expriense__item-img" />
+                <h3 class="expriense__item-title">
+                  Two teams play head-to-head
+                </h3>
+              </div>
+              <div class="expriense__item">
+                <img src="assets/images/expriens_icon2.svg" class="expriense__item-img" />
+                <h3 class="expriense__item-title">
+                  All equipment is inside our trailer
+                </h3>
+              </div>
+              <div class="expriense__item">
+                <img src="assets/images/expriens_icon3.svg" class="expriense__item-img" />
+                <h3 class="expriense__item-title">Instant group switching</h3>
+              </div>
+              <div class="expriense__item">
+                <img src="assets/images/expriens_icon4.svg" class="expriense__item-img" />
+                <h3 class="expriense__item-title">
+                  Professional hosting and support
+                </h3>
+              </div>
+              <div class="expriense__item">
+                <img src="assets/images/expriens_icon5.svg" class="expriense__item-img" />
+                <h3 class="expriense__item-title">
+                  Customizable for any type of event
+                </h3>
+              </div>
+            </div>
+            <div class="expriense__videos">
+              <div class="expriense__video">
+                <div class="expriense__video_content">
+                  <img src="assets/images/play.svg" alt="" class="play" />
+                  <video src="assets/videos/room.mp4" poster="assets/images/expriense_img1.png" controls></video>
+                </div>
+                <div class="expriense__video__bottom">
+                  <a href="#" class="expriense__video-logo">
+                    <img src="assets/images/video_logo1.png" alt="" />
+                  </a>
+                  <div class="expriense__video__bottom-info">
+                    <span>“It was way better than we expected!”</span>
+                    <div class="expriense__video-title">
+                      HR Manager, XYZ Company
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="expriense__video">
+                <div class="expriense__video_content">
+                  <img src="assets/images/play.svg" alt="" class="play" />
+                  <video src="assets/videos/room.mp4" poster="assets/images/expriense_img2.png" controls></video>
+                </div>
+                <div class="expriense__video__bottom">
+                  <a href="#" class="expriense__video-logo">
+                    <img src="assets/images/video_logo2.png" alt="" />
+                  </a>
+                  <div class="expriense__video__bottom-info">
+                    <span>“It was way better than we expected!”</span>
+                    <div class="expriense__video-title">
+                      HR Manager, XYZ Company
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="expriense__video">
+                <div class="expriense__video_content">
+                  <img src="assets/images/play.svg" alt="" class="play" />
+                  <video src="assets/videos/room.mp4" poster="assets/images/expriense_img3.png" controls></video>
+                </div>
+                <div class="expriense__video__bottom">
+                  <div class="expriense__video__bottom-info">
+                    <span>“It was way better than we expected!”</span>
+                    <div class="expriense__video-title">
+                      HR Manager, XYZ Company
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="expriense__btn">View more</a>
+          </div>
 
-              <div class="input_box">
-                <input type="time" id="timePicker" />
-                <span class="icon">
-                  <!-- Soat ikonkasi -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 8V13H16V15H10V8H12ZM12 2C6.48 2 2 6.48 2 12C2 17.52 
+          <div class="testimonial">
+            <div class="swiper testimonial__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide testimonial__item">
+                  <p class="testimonial__text">
+                    “It was way better than we expected!”
+                  </p>
+                  <div class="testimonial__footer">
+                    <div class="testimonial__user">
+                      <div class="testimonial__avatar">N</div>
+                      <div class="testimonial__info">
+                        <div class="testimonial__name">XYZ COMPANY</div>
+                        <div class="testimonial__role">HR Manager</div>
+                      </div>
+                    </div>
+                    <div class="testimonial__stars">
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide testimonial__item">
+                  <p class="testimonial__text">
+                    “It was way better than we expected!”
+                  </p>
+                  <div class="testimonial__footer">
+                    <div class="testimonial__user">
+                      <img src="https://i.pravatar.cc/40?img=3" class="testimonial__avatar" />
+                      <div class="testimonial__info">
+                        <div class="testimonial__name">NAME</div>
+                        <div class="testimonial__role">about bit</div>
+                      </div>
+                    </div>
+                    <div class="testimonial__stars">
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide testimonial__item">
+                  <p class="testimonial__text">
+                    “It was way better than we expected!”
+                  </p>
+                  <div class="testimonial__footer">
+                    <div class="testimonial__user">
+                      <div class="testimonial__avatar">N</div>
+                      <div class="testimonial__info">
+                        <div class="testimonial__name">NAME</div>
+                        <div class="testimonial__role">about bit</div>
+                      </div>
+                    </div>
+                    <div class="testimonial__stars">
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide testimonial__item">
+                  <p class="testimonial__text">
+                    “It was way better than we expected!”
+                  </p>
+                  <div class="testimonial__footer">
+                    <div class="testimonial__user">
+                      <img src="https://i.pravatar.cc/40?img=5" class="testimonial__avatar" />
+                      <div class="testimonial__info">
+                        <div class="testimonial__name">NAME</div>
+                        <div class="testimonial__role">about bit</div>
+                      </div>
+                    </div>
+                    <div class="testimonial__stars">
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonial__item">
+                  <p class="testimonial__text">
+                    “It was way better than we expected!”
+                  </p>
+                  <div class="testimonial__footer">
+                    <div class="testimonial__user">
+                      <img src="https://i.pravatar.cc/40?img=5" class="testimonial__avatar" />
+                      <div class="testimonial__info">
+                        <div class="testimonial__name">NAME</div>
+                        <div class="testimonial__role">about bit</div>
+                      </div>
+                    </div>
+                    <div class="testimonial__stars">
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                      <img src="assets/images/star.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section class="packages">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">06</div>
+              <h2 class="component__top-title">
+                Flexible Packages for Any Occasion
+              </h2>
+              <div class="packages__content">
+                <div class="packages__header">
+                  <div class="packages__header-item">Package</div>
+                  <div class="packages__header-item">Description</div>
+                  <div class="packages__header-item">Price</div>
+                </div>
+                <div class="packages__items">
+                  <div class="packages__item">
+                    <div class="packages__item-logo">
+                      <img src="assets/images/package_icon1.svg" alt="" />
+                      <h2>Standard</h2>
+                    </div>
+                    <div class="packages__item-text">
+                      <div class="mobile__show">Description</div>
+                      <span> 2 hours of gameplay, up to 4 rounds</span>
+                    </div>
+                    <div class="packages__item-price">
+                      <h4 class="mobile__show">Price</h4>
+                      <span>from $700</span>
+                    </div>
+                  </div>
+                  <div class="packages__item">
+                    <div class="packages__item-logo">
+                      <img src="assets/images/package_icon2.svg" alt="" />
+                      <h2>Corporate</h2>
+                    </div>
+                    <div class="packages__item-text">
+                      <div class="mobile__show">Description</div>
+                      <span>Branding, custom challenges, up to 6 rounds</span>
+                    </div>
+                    <div class="packages__item-price">
+                      <h4 class="mobile__show">Price</h4>
+                      <span>upon request</span>
+                    </div>
+                  </div>
+                  <div class="packages__item">
+                    <div class="packages__item-logo">
+                      <img src="assets/images/package_icon3.svg" alt="" />
+                      <h2>Party</h2>
+                    </div>
+                    <div class="packages__item-text">
+                      <div class="mobile__show">Description</div>
+                      <span>Ideal for birthdays, graduations</span>
+                    </div>
+                    <div class="packages__item-price">
+                      <h4 class="mobile__show">Price</h4>
+                      <span>upon request</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="packages__link">
+                <img src="assets/images/booking4.svg" alt="" />
+                <div class="packages__info">
+                  <div class="packages__info-title">Payment:</div>
+                  <p class="packages__info-text">
+                    credit card, online options
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="service">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">07</div>
+              <h2 class="component__top-title">We Come to You</h2>
+            </div>
+            <div class="service__items">
+              <div class="escape__item">
+                <img src="assets/images/service1.svg" alt="" />
+                <div class="escape__body">
+                  <div class="escape__item-title">
+                    Serving a 50-mile <span>radius from Branson</span>
+                  </div>
+                </div>
+              </div>
+              <div class="escape__item">
+                <img src="assets/images/service2.svg" alt="" />
+                <div class="escape__body">
+                  <div class="escape__item-title">
+                    Longer travel? <br />
+                    <span>Let’s talk!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking">
+              <div class="booking__title">How to Book:</div>
+              <div class="booking__items">
+                <div class="booking__item">
+                  <div class="booking__item_top">
+                    <img src="assets/images/booking1.svg" alt="" class="booking__item-img" />
+                    <h4 class="booking__item-title">
+                      Through website, phone, or email
+                    </h4>
+                  </div>
+                  <div class="booking__item-number">01</div>
+                </div>
+                <div class="booking__item">
+                  <div class="booking__item_top">
+                    <img src="assets/images/booking2.svg" alt="" class="booking__item-img" />
+                    <h4 class="booking__item-title">
+                      Deposit confirms your booking
+                    </h4>
+                  </div>
+                  <div class="booking__item-number">02</div>
+                </div>
+                <div class="booking__item">
+                  <div class="booking__item_top">
+                    <img src="assets/images/booking3.png" alt="" class="booking__item-img" />
+                    <h4 class="booking__item-title">
+                      We finalize all details a few days before the event
+                    </h4>
+                  </div>
+                  <div class="booking__item-number">03</div>
+                </div>
+                <div class="booking__item">
+                  <div class="booking__item_top">
+                    <img src="assets/images/booking4.svg" alt="" class="booking__item-img" />
+                    <h4 class="booking__item-title">Request a Booking</h4>
+                  </div>
+                  <div class="booking__item-number">04</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="adventure priority">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">08</div>
+              <h2 class="component__top-title">
+                Your Safety Is Our Priority
+              </h2>
+            </div>
+            <div class="adventure__items">
+              <div class="adventure__item">
+                <img src="assets/images/priority_img1.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Game master <br />
+                  monitors the <br />
+                  experience
+                </h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/priority_img2.svg" alt="" />
+                <h2 class="adventure__item-title">All props are sanitized</h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/priority_img3.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Emergency exits <br />
+                  onboard
+                </h2>
+              </div>
+              <div class="adventure__item">
+                <img src="assets/images/priority_img4.svg" alt="" />
+                <h2 class="adventure__item-title">
+                  Equipment meets all <br />
+                  safety standards
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="additional">
+          <div class="container">
+            <div class="component__top">
+              <div class="component__top-number">09</div>
+              <h2 class="component__top-title">
+                Want More? We've Got You Covered
+              </h2>
+            </div>
+            <div class="additional__items">
+              <div class="additional__item">
+                <img src="assets/images/additional__img1.png" alt="" class="additional__item-img" />
+                <div class="additional__item-title">
+                  Photo & video packages
+                </div>
+              </div>
+              <div class="additional__item">
+                <img src="assets/images/additional__img2.png" alt="" class="additional__item-img" />
+                <div class="additional__item-title">
+                  Themed costumes & decor
+                </div>
+              </div>
+              <div class="additional__item">
+                <img src="assets/images/additional__img3.png" alt="" class="additional__item-img" />
+                <div class="additional__item-title">
+                  Catering coordination
+                </div>
+              </div>
+              <div class="additional__item">
+                <img src="assets/images/additional__img4.png" alt="" class="additional__item-img" />
+                <div class="additional__item-title">
+                  Custom event branding
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contact">
+          <div class="container">
+            <div class="contact__banner">
+              <div class="contact__banner-left">
+                <div class="contact__banner-top">
+                  <span>Ready for an Adventure?</span>
+                </div>
+                <div class="contact__banner-title">
+                  Contact us, and we’ll bring the escape room to your
+                  doorstep!
+                </div>
+              </div>
+              <div class="contact__link">
+                <img src="assets/images/contact_arrow.svg" alt="" />
+                <img src="assets/images/contact_arrow2.svg" alt="" />
+                <img src="assets/images/contact_arrow3.svg" alt="" />
+                <img src="assets/images/contact_arrow4.svg" alt="" />
+                <a href="#" class="open_modal">Book Now</a>
+              </div>
+            </div>
+            <div class="contact__content">
+              <div class="contact__content__left">
+                <div class="contact__content_top">
+                  <div class="contact__content__left-title">COME SEE US</div>
+                  <ul class="contact__content__items">
+                    <li>
+                      <img src="assets/images/contact1.svg" alt="" />
+                      <span>1819 West HWY 76 <br />
+                        Branson, MO</span>
+                    </li>
+                    <li>
+                      <a href="mailto:cryptexbranson@gmail.com">
+                        <img src="assets/images/contact2.svg" alt="" />
+                        <span>cryptexbranson@gmail.com</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tel:4173206263">
+                        <img src="assets/images/contact3.svg" alt="" />
+                        <span>(417) 320-6263</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="contact__content_bottom">
+                  <ul class="contact__content__items">
+                    <span class="contact__content__left-title">HOURS OF OPERATION</span>
+                    <li>
+                      <img src="assets/images/contact4.svg" alt="" />
+                      <span>Mon - Sat:</span>
+                      <span>9AM - 9PM</span>
+                    </li>
+                    <li>
+                      <img src="assets/images/contact4.svg" alt="" />
+                      <span>Sun:</span>
+                      <span>10AM - 6PM</span>
+                    </li>
+                  </ul>
+                  <ul class="contact__content__social-lists">
+                    <span class="contact__content__left-title">HOURS OF OPERATION</span>
+                    <li>
+                      <a href="#"><img src="assets/images/social1.svg" alt="" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="assets/images/social2.svg" alt="" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="assets/images/social3.svg" alt="" /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="map -home-map">
+                <iframe width="100%" max-width="700px" height="100%" style="border: 0" title="We are here"
+                  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4527.383539140278!2d-93.25151135207456!3d36.64218373056704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf0350539e088f%3A0x3d88c09b4777b3d4!2sCryptex%20Branson%20Escape%20Rooms!5e0!3m2!1sru!2sru!4v1693414679261!5m2!1sru!2sru"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="modal_order">
+    <div class="modal">
+      <form class="modal_content">
+        <div class="modal_header">
+          <h2 class="modal_title">
+            pre-order of An Escape Room <span>That Comes to You!</span>
+          </h2>
+          <div class="exit_modal">
+            <img src="assets/images/close.svg" alt="" />
+          </div>
+        </div>
+        <div class="modal_content_items">
+          <label>
+            <span>FIRST NAME*</span>
+            <input type="text" placeholder="Ваше имя" name="first_name" />
+          </label>
+          <label>
+            <span>TELEPHONE*</span>
+            <input type="tel" placeholder="Ваш телефон" id="phone_input" name="phone" class="phone_input" />
+          </label>
+        </div>
+        <div class="booking_form">
+          <div class="input_group">
+            <div class="input_box">
+              <input type="date" id="datePicker" placeholder="tue sep 12, 2025" />
+              <span class="icon">
+                <!-- Kalendar ikonkasi -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 10H17V12H7V10ZM7 14H14V16H7V14ZM19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 
+                    21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20Z" fill="white" />
+                </svg>
+              </span>
+            </div>
+
+            <div class="input_box">
+              <input type="time" id="timePicker" />
+              <span class="icon">
+                <!-- Soat ikonkasi -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 8V13H16V15H10V8H12ZM12 2C6.48 2 2 6.48 2 12C2 17.52 
                     6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 
                     2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 
-                    7.59 20 12C20 16.41 16.41 20 12 20Z"
-                      fill="white"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </div>
-
-            <div class="checkbox_group">
-              <label for="agree_terms">
-                <input type="checkbox" id="agree_terms" />
-                <span class="custom_checkbox"></span>
-                <span class="terms_text">
-                  Please confirm that you agree to our terms and conditions to
-                  complete your booking.
-                  <a href="#">View terms</a>
-                </span>
-              </label>
-              <button class="continue_btn">CONTINUE</button>
+                    7.59 20 12C20 16.41 16.41 20 12 20Z" fill="white" />
+                </svg>
+              </span>
             </div>
           </div>
-        </form>
-      </div>
+
+          <div class="checkbox_group">
+            <label for="agree_terms">
+              <input type="checkbox" id="agree_terms" />
+              <span class="custom_checkbox"></span>
+              <span class="terms_text">
+                Please confirm that you agree to our terms and conditions to
+                complete your booking.
+                <a href="#">View terms</a>
+              </span>
+            </label>
+            <button class="continue_btn">CONTINUE</button>
+          </div>
+        </div>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"></script>
-  <!-- flatpickr -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"></script>
+<!-- flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
+
 </html>
