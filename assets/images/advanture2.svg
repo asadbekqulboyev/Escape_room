@@ -12,12 +12,12 @@
 <feGaussianBlur stdDeviation="20" result="effect1_foregroundBlur_5518_2278"/>
 </filter>
 <linearGradient id="paint0_linear_5518_2278" x1="52.992" y1="57.69" x2="147.878" y2="64.4087" gradientUnits="userSpaceOnUse">
-<stop stop-color="#BB0DBA"/>
+<stop offset="0" stop-color="#BB0DBA"/>
 <stop offset="0.488034" stop-color="#5C18DD"/>
 <stop offset="1" stop-color="#0099AD"/>
 </linearGradient>
 <linearGradient id="paint1_linear_5518_2278" x1="63.08" y1="66.725" x2="136.699" y2="71.9378" gradientUnits="userSpaceOnUse">
-<stop stop-color="#BB0DBA"/>
+<stop offset="0" stop-color="#BB0DBA"/>
 <stop offset="0.488034" stop-color="#5C18DD"/>
 <stop offset="1" stop-color="#0099AD"/>
 </linearGradient>

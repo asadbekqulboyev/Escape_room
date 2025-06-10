@@ -461,11 +461,12 @@
     width: calc(50% - 5px);
   }
 }
-.adventure.priority .adventure__item img {
+.adventure.priority .adventure__item svg {
+  height: fit-content;
   max-width: 100%;
 }
 @media (max-width: 556px) {
-  .adventure.priority .adventure__item img {
+  .adventure.priority .adventure__item svg {
     width: 78px;
   }
 }
@@ -1203,12 +1204,12 @@
 }
 @media (max-width: 992px) {
   .service .escape__item svg {
-    max-width: 78px;
+    max-width: 98px;
   }
 }
 @media (max-width: 768px) {
   .service .escape__item svg {
-    max-width: 70px;
+    max-width: 95px;
   }
 }
 @media (max-width: 992px) {

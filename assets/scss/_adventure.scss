@@ -124,7 +124,8 @@
       @media (max-width: 556px) {
         width: calc(50% - 5px);
       }
-      img {
+      svg {
+        height: fit-content;
         max-width: 100%;
         @media (max-width: 556px) {
           width: 78px;
