@@ -210,6 +210,7 @@
       line-height: 130%;
       text-transform: uppercase;
       opacity: 0.3;
+      list-style: none;
     }
     &__social-lists {
       display: flex;
@@ -232,7 +233,7 @@
       align-items: flex-start;
       gap: 20px;
       flex: 0 0 auto;
-      li {
+      li:not(.contact__content__left-title) {
         list-style: none;
         display: flex;
         align-items: flex-start;
