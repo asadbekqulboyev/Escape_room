@@ -2,6 +2,9 @@
   position: relative;
   user-select: none;
   padding: 100px 0 60px;
+  .container{
+    max-width: 1380px;
+  }
   @media (max-width: 768px) {
     padding: 60px 0px;
   }
@@ -169,6 +172,8 @@
       @media (max-width: 768px) {
         padding: 30px 15px 30px 0;
         gap: 80px 0;
+        background: url(../images/mobile_gradient.png) no-repeat center;
+        background-size: 100% 100%;
       }
       @media (max-width: 556px) {
         gap: 40px 0;
@@ -217,9 +222,10 @@
     display: flex;
     align-items: center;
     flex: 0 0 auto;
-    img {
+    svg {
+      height: fit-content;
       @media (max-width: 768px) {
-        width: 80px;
+        width: 95px;
       }
     }
   }

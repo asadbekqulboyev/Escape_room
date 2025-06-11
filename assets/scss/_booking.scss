@@ -33,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    max-height: 550px;
+    min-height: 550px;
     overflow: hidden;
     @media (max-width: 1580px) {
       width: calc(33.33% - 10px);
@@ -86,7 +86,7 @@
       font-size: 240px;
       font-style: normal;
       font-weight: 500;
-      line-height: 40%;
+      line-height: 45%;
       text-transform: uppercase;
       @media (max-width: 1580px) {
         font-size: 180px;

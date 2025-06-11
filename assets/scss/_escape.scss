@@ -30,6 +30,13 @@
       @media (max-width: 768px) {
         width: 100%;
         padding: 20px 10px;
+        
+      }
+      svg{
+        height: fit-content;
+        @media (max-width: 768px) {
+          width: 105px;
+        }
       }
       &-title {
         text-transform: uppercase;

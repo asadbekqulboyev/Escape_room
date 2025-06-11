@@ -61,7 +61,8 @@
         font-size: var(--h4);
       }
     }
-    img {
+    svg {
+      height: fit-content;
       @media (max-width: 768px) {
         width: 80px;
       }

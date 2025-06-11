@@ -190,7 +190,8 @@
     text-decoration: none;
     color: #fff;
     margin-top: 10px;
-    img {
+    svg {
+      height: fit-content;
       @media (max-width: 556px) {
         width: 80px;
       }
