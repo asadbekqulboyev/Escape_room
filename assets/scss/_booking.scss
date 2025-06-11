@@ -45,7 +45,7 @@
     }
     @media (max-width: 768px) {
       min-height: auto;
-      max-height: 300px;
+      max-height: 355px;
       padding: 10px;
       width: calc(50% - 5px);
     }
@@ -56,11 +56,14 @@
       justify-content: center;
     }
     &-img {
+
+      height: fit-content
+      ;
       @media (max-width: 768px) {
-        max-width: 78px;
+        max-width: 118px;
       }
       @media (max-width: 556px) {
-        max-width: 70px;
+        max-width: 100px;
       }
     }
     &-title {
