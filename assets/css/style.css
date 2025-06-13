@@ -16,6 +16,7 @@
   --h4: 20px;
   --h5: 18px;
   --h6: 16px;
+  --black:#000;
 }
 
 .hero {
@@ -134,7 +135,7 @@
 }
 @media (max-width: 556px) {
   .hero__videos {
-    max-width: 60%;
+    max-width: 58%;
     padding: 5px;
     border-radius: 20px;
   }
@@ -329,6 +330,8 @@
 @media (max-width: 768px) {
   .adventure .container {
     padding: 60px 0px;
+    background: url(../images/mobile_gradient.png) no-repeat center;
+    background-size: 100% 100%;
   }
 }
 @media (max-width: 768px) {
@@ -437,6 +440,8 @@
 }
 @media (max-width: 556px) {
   .adventure.priority .container {
+    background: url(../images/bg_priority_mobile.png) no-repeat center;
+    background-size: 100% 100%;
     padding: 60px 5px 60px 0px;
   }
 }
@@ -2089,11 +2094,12 @@ body {
   font-size: var(--h4);
   font-style: normal;
   font-weight: 500;
+  background: var(--black);
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1690px;
+  max-width: 1920px;
   padding: 0 24px;
 }
 @media (max-width: 768px) {
@@ -2153,11 +2159,6 @@ body {
   .component__top-description {
     font-size: var(--h4);
   }
-}
-
-.main_bg {
-  background: url(../images/case_bg.png) no-repeat center;
-  background-size: 100% 100%;
 }
 
 .escape__item {
@@ -2453,4 +2454,22 @@ video::-webkit-media-controls {
 
 .swiper-pagination {
   cursor: pointer;
+}
+
+main {
+  position: relative;
+  z-index: 1222222222;
+}
+
+.bg-gradient {
+  top: 0;
+  left: 50%;
+  width: var(--full-ww);
+  max-width: 1920px;
+  height: calc(var(--full-ww) * 0.684);
+  min-height: 100vh;
+  transform: translatex(-50%);
+  --animation-time: 9s;
+  --animation-delay: calc(var(--animation-time) / 4);
+  --animation-space: 240px;
 }/*# sourceMappingURL=style.css.map */
