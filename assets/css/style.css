@@ -16,7 +16,7 @@
   --h4: 20px;
   --h5: 18px;
   --h6: 16px;
-  --black:#000;
+  --black: #000;
 }
 
 .hero {
@@ -2099,7 +2099,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1690px;
   padding: 0 24px;
 }
 @media (max-width: 768px) {
