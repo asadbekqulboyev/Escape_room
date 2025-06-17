@@ -596,6 +596,8 @@ line-height: 110%;
   margin-top: 248px;
   height: fit-content;
   text-align: right;
+  opacity: 0.4;
+  
 }
 
 @media (max-width: 1250px) {
@@ -710,6 +712,7 @@ line-height: 110%;
 }
 .works__content__item.active {
   background: rgba(255, 255, 255, 0.05);
+  opacity: 1;
 }
 .works__keys {
   padding: 0 24px;
