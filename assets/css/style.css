@@ -17,6 +17,7 @@
   --h5: 18px;
   --h6: 16px;
   --black: #000;
+ 
 }
 
 .hero {
@@ -26,8 +27,9 @@
 .hero__bg {
   width: 100%;
   object-fit: cover;
-  min-height: 780px;
+  min-height: 600px;
 }
+
 .hero .container {
   width: 100%;
   display: flex;
@@ -62,6 +64,14 @@
     font-size: 56px;
   }
 }
+@media (max-width: 768px) {
+  .hero__content-title {
+  font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: 110%; 
+ }
+}
 .hero__content-title span {
   color: #ef66ee;
   display: block;
@@ -72,6 +82,11 @@
   font-weight: 300;
   max-width: 695px;
   margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .hero__content-description {
+    font-size: 16px;
+  }
 }
 .hero__content-link {
   display: flex;
@@ -126,16 +141,18 @@
     position: absolute;
     right: 24px;
     bottom: -104px;
+    max-width: 58%;
   }
 }
 @media (max-width: 768px) {
   .hero__videos {
-    max-width: 350px;
+    max-width: 45%;
+    right: 15px;
   }
 }
 @media (max-width: 556px) {
   .hero__videos {
-    max-width: 58%;
+    max-width: 55%;
     padding: 5px;
     border-radius: 20px;
   }
@@ -534,7 +551,8 @@
   width: 100%;
   border-radius: 20px;
   background: #0099ad;
-  min-height: 322px;
+  height: 100%;
+ max-height: 322px;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -559,6 +577,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 90vh;
 }
 @media (max-width: 1250px) {
   .works__content__items {
@@ -787,6 +806,7 @@
   .works__right .works__desctop_none {
     display: block;
     width: 80px;
+    height: fit-content;
   }
 }
 .works__icons {
@@ -1034,6 +1054,11 @@
   line-height: 130%;
   text-decoration: none;
   padding: 15px 30px;
+  transition: all 0.3s ease;
+}
+.expriense__btn:hover{
+  background: var(--accent);
+  color: #fff;
 }
 @media (max-width: 1200px) {
   .expriense__btn {
@@ -1051,6 +1076,16 @@
   user-select: none;
   /* Progressbar */
 }
+/* .testimonial .swiper-wrapper{
+  width: 100%;
+  overflow-x: auto;
+}
+.testimonial .swiper-wrapper::-webkit-scrollbar{
+  max-width: 1690px;
+}
+.testimonial .swiper-wrapper::-webkit-scrollbar-thumb{
+max-width: 20px;
+} */
 @media (max-width: 1200px) {
   .testimonial {
     padding: 80px 0 0;
@@ -1076,15 +1111,20 @@
 }
 .testimonial .container {
   position: relative;
+  overflow-x: hidden;
 }
-.testimonial .container .swiper-pagination {
+.testimonial .container .testimonial__scrollbar{
   background: rgba(255, 255, 255, 0.05);
   height: 8px;
   border-radius: 30px;
 }
-.testimonial .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+.testimonial .testimonial__scrollbar .testimonial__scrollbar_thumb {
   border-radius: 20px;
+  width: 100%;
   background: #5c18dd;
+  max-width: 550px;
+  height: 8px;
+  cursor: pointer;
 }
 .testimonial .testimonial__item {
   background: #000;
@@ -1385,11 +1425,11 @@
   background: rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
-  gap: 60px;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  min-height: 550px;
+  max-height: 550px;
+  
   overflow: hidden;
 }
 @media (max-width: 1580px) {
@@ -1407,7 +1447,7 @@
 @media (max-width: 768px) {
   .booking__item {
     min-height: auto;
-    max-height: 355px;
+    max-height: 350px;
     padding: 10px;
     width: calc(50% - 5px);
   }
@@ -1437,7 +1477,9 @@
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
+  line-height: 130%;
 }
+
 @media (max-width: 1580px) {
   .booking__item-title {
     font-size: 26px;
@@ -1459,8 +1501,9 @@
   font-size: 240px;
   font-style: normal;
   font-weight: 500;
-  line-height: 45%;
+  line-height: 80%;
   text-transform: uppercase;
+  transform:translateY(40px);
 }
 @media (max-width: 1580px) {
   .booking__item-number {
@@ -2100,11 +2143,13 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1690px;
-  padding: 0 24px;
+
+  
+
 }
-@media (max-width: 768px) {
+@media (max-width: 1700px) {
   .container {
-    padding: 0 15px;
+    padding: 0 24px;
   }
 }
 
