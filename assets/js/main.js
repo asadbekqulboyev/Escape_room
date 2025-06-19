@@ -198,3 +198,118 @@ $(document).ready(function () {
     }
   });
 });
+$(function () {
+  const $container = $('.works__content');
+  const $items = $container.find('.works__content__item');
+
+  let scrollReleased = false; // Scroll ochilganmi?
+  let scrollLocked = false;   // Body bloklanganmi?
+
+  // Body scrollni boshqarish
+  function lockBodyScroll() {
+    if (!scrollLocked) {
+      $('body').css('overflow', 'hidden');
+      scrollLocked = true;
+    }
+  }
+
+  function unlockBodyScroll() {
+    if (scrollLocked) {
+      $('body').css('overflow', 'auto');
+      scrollLocked = false;
+    }
+  }
+
+  // Sahifa scroll top qiymatini containerga tenglashtirish (silliq)
+  function scrollToContainerTop() {
+    const currentScroll = $(window).scrollTop();
+    const targetScroll = $container.offset().top - 10;
+    const diff = Math.abs(currentScroll - targetScroll);
+
+    if (diff > 40) {
+      $('html, body').stop().animate({ scrollTop: targetScroll }, 300);
+    } else {
+      $(window).scrollTop(targetScroll);
+    }
+  }
+
+  // Container ekranga aniq 10px qolganmi?
+  function isContainerNearTop() {
+    const rect = $container[0].getBoundingClientRect();
+    return rect.top <= 10 && rect.top >= -10;
+  }
+
+  // Foydalanuvchi sahifani scroll qilganda
+  $(window).on('scroll', function () {
+    const scrollTop = $(window).scrollTop();
+    const containerTop = $container.offset().top;
+
+    // Yuqoriga qaytgan bo‘lsa — holatni qayta tiklash
+    if (scrollReleased && scrollTop + $(window).height() < containerTop + 100) {
+      scrollReleased = false;
+    }
+
+    // Scroll qotiruvchi shart
+    if (!scrollReleased && isContainerNearTop()) {
+      scrollToContainerTop();
+      lockBodyScroll();
+    }
+  });
+
+  // .works__content scroll qilganda — active va oxirgi itemni aniqlash
+  $container.on('scroll', function () {
+    const containerHeight = $container.height();
+    let closestIndex = -1;
+    let smallestDiff = Infinity;
+
+    $items.each(function (index) {
+      const $item = $(this);
+      const itemTop = $item.offset().top - $container.offset().top;
+      const itemCenter = itemTop + $item.outerHeight() / 2;
+      const containerCenter = containerHeight / 2;
+      const diff = Math.abs(containerCenter - itemCenter);
+
+      if (diff < smallestDiff) {
+        smallestDiff = diff;
+        closestIndex = index;
+      }
+    });
+
+    // Active klasslarni boshqarish
+    $items.removeClass('active');
+    if (closestIndex !== -1) {
+      const $activeItem = $items.eq(closestIndex);
+      $activeItem.addClass('active');
+
+      // Oxirgi elementga kelsa → body scrollni qayta yoqish
+      if (closestIndex === $items.length - 1 && !scrollReleased) {
+        scrollReleased = true;
+        unlockBodyScroll();
+
+        // Pastga siljitish (aniq pastga)
+        setTimeout(() => {
+          const offset = $container.offset().top + $container.outerHeight();
+          $('html, body').animate({ scrollTop: offset }, 500);
+        }, 300);
+      }
+    }
+  });
+
+  // Dastlab scrollni trigger qilish (active aniqlansin)
+  setTimeout(() => {
+    $container.scrollTop($container.scrollTop() + 1);
+  }, 100);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
