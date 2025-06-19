@@ -202,10 +202,10 @@ $(function () {
   const $container = $('.works__content');
   const $items = $container.find('.works__content__item');
 
-  let scrollReleased = false; // Scroll ochilganmi?
-  let scrollLocked = false;   // Body bloklanganmi?
+  let scrollReleased = false;
+  let scrollLocked = false;
+  let ticking = false; // requestAnimationFrame holati
 
-  // Body scrollni boshqarish
   function lockBodyScroll() {
     if (!scrollLocked) {
       $('body').css('overflow', 'hidden');
@@ -220,7 +220,11 @@ $(function () {
     }
   }
 
-  // Sahifa scroll top qiymatini containerga tenglashtirish (silliq)
+  function isContainerNearTop() {
+    const rect = $container[0].getBoundingClientRect();
+    return rect.top <= 10 && rect.top >= -10;
+  }
+
   function scrollToContainerTop() {
     const currentScroll = $(window).scrollTop();
     const targetScroll = $container.offset().top - 10;
@@ -233,30 +237,34 @@ $(function () {
     }
   }
 
-  // Container ekranga aniq 10px qolganmi?
-  function isContainerNearTop() {
-    const rect = $container[0].getBoundingClientRect();
-    return rect.top <= 10 && rect.top >= -10;
-  }
-
-  // Foydalanuvchi sahifani scroll qilganda
-  $(window).on('scroll', function () {
+  // ⚙️ requestAnimationFrame scroll kuzatuvchisi
+  function checkScrollPosition() {
     const scrollTop = $(window).scrollTop();
     const containerTop = $container.offset().top;
 
-    // Yuqoriga qaytgan bo‘lsa — holatni qayta tiklash
+    // Qayta yuqoriga chiqilganda holatni tiklash
     if (scrollReleased && scrollTop + $(window).height() < containerTop + 100) {
       scrollReleased = false;
     }
 
-    // Scroll qotiruvchi shart
+    // Scroll qotiruvchi holat
     if (!scrollReleased && isContainerNearTop()) {
       scrollToContainerTop();
       lockBodyScroll();
     }
+
+    ticking = false; // qayta ruxsat beramiz
+  }
+
+  // window scroll listener — RAF orqali
+  $(window).on('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(checkScrollPosition);
+      ticking = true;
+    }
   });
 
-  // .works__content scroll qilganda — active va oxirgi itemni aniqlash
+  // works__content ichida scroll qilish — active aniqlash
   $container.on('scroll', function () {
     const containerHeight = $container.height();
     let closestIndex = -1;
@@ -275,18 +283,15 @@ $(function () {
       }
     });
 
-    // Active klasslarni boshqarish
     $items.removeClass('active');
     if (closestIndex !== -1) {
       const $activeItem = $items.eq(closestIndex);
       $activeItem.addClass('active');
 
-      // Oxirgi elementga kelsa → body scrollni qayta yoqish
       if (closestIndex === $items.length - 1 && !scrollReleased) {
         scrollReleased = true;
         unlockBodyScroll();
 
-        // Pastga siljitish (aniq pastga)
         setTimeout(() => {
           const offset = $container.offset().top + $container.outerHeight();
           $('html, body').animate({ scrollTop: offset }, 500);
@@ -295,11 +300,12 @@ $(function () {
     }
   });
 
-  // Dastlab scrollni trigger qilish (active aniqlansin)
+  // Boshlanishda scrollni trigger qilish
   setTimeout(() => {
     $container.scrollTop($container.scrollTop() + 1);
   }, 100);
 });
+
 
 
 
