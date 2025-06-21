@@ -17,20 +17,27 @@
   --h5: 18px;
   --h6: 16px;
   --black: #000;
- 
+  --full-window-width: 100vw;
+  --full-ww: min(1920px, var(--full-window-width));
+  --w-768: calc((var(--full-ww) - 768px) / 1152);
+  --sp-115-24: calc(var(--w-768) * 91 + 24px);
 }
-
+.container {
+  padding-left: clamp(24px, var(--sp-115-24), 115px);
+  padding-right: clamp(24px, var(--sp-115-24), 115px);
+  max-width: 1690px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
 .hero {
   position: relative;
   line-height: 0;
 }
-.hero__bg {
-  width: 100%;
-  object-fit: cover;
-  min-height: 600px;
-}
-
-.hero .container {
+.hero__container{
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -42,10 +49,16 @@
   line-height: 130%;
 }
 @media (max-width: 1024px) {
-  .hero .container {
+  .hero__container {
     bottom: 124px;
   }
 }
+.hero__bg {
+  width: 100%;
+  object-fit: cover;
+  min-height: 600px;
+}
+
 .hero__content-title {
   color: #fff;
   font-size: var(--h1);
@@ -75,6 +88,11 @@ line-height: 110%;
 .hero__content-title span {
   color: #ef66ee;
   display: block;
+}
+@media (max-width:768px){
+  .hero__content-title span {
+    display: inline;
+  }
 }
 .hero__content-description {
   font-size: var(--h4);
@@ -280,13 +298,13 @@ line-height: 130%;
   background: linear-gradient(94deg, var(--accent) 11.47%, #5c18dd 48.94%, #0099ad 88.24%);
   padding: 5px 0;
 }
-.banner .container {
+.banner .banner__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .banner .container {
+  .banner .banner__container {
     padding: 0 15px;
   }
 }
@@ -350,7 +368,7 @@ line-height: 130%;
     padding: 60px 15px;
   }
 }
-.adventure .container {
+.adventure__container {
   padding: 100px ;
   border-radius: 20px;
   position: relative;
@@ -359,12 +377,12 @@ line-height: 130%;
   padding-bottom:65px;
 }
 @media (max-width: 1400px) {
-  .adventure .container {
+  .adventure__container {
     padding: 60px;
   }
 }
 @media (max-width: 768px) {
-  .adventure .container {
+  .adventure__container {
     padding: 60px 0px;
     background: url(../images/mobile_gradient.png) no-repeat center;
     background-size: 100% 100%;
@@ -478,18 +496,18 @@ top: -35px;
   }
 }
 @media (max-width: 1200px) {
-  .adventure.priority .container {
+  .adventure.priority .adventure__container {
     flex-wrap: wrap;
     width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .adventure.priority .container {
+  .adventure.priority .adventure__container {
     padding: 60px 20px 60px 7px;
   }
 }
 @media (max-width: 556px) {
-  .adventure.priority .container {
+  .adventure.priority .adventure__container {
     background: url(../images/bg_priority_mobile.png) no-repeat center;
     background-size: 100% 100%;
     padding: 60px 5px 60px 0px;
@@ -548,9 +566,7 @@ top: -35px;
   user-select: none;
   padding: 100px 0 60px;
 }
-.works .container {
-  max-width: 1380px;
-}
+
 @media (max-width: 768px) {
   .works {
     padding: 60px 0px;
@@ -765,7 +781,7 @@ top: -35px;
     padding: 0 15px;
   }
 }
-.works__keys .container {
+.works__keys__container {
   padding: 63px 100px 65px 24px;
   background: url(../images/bg_advanture.png) no-repeat center;
   background-size: 100% 100%;
@@ -774,12 +790,12 @@ top: -35px;
   flex-wrap: wrap;
 }
 @media (max-width: 1200px) {
-  .works__keys .container {
+  .works__keys__container {
     padding: 40px 40px 40px 7.5px;
   }
 }
 @media (max-width: 768px) {
-  .works__keys .container {
+  .works__keys__container {
     padding: 30px 15px 30px 0;
     gap: 80px 0;
     background: url(../images/mobile_gradient.png) no-repeat center;
@@ -787,7 +803,7 @@ top: -35px;
   }
 }
 @media (max-width: 556px) {
-  .works__keys .container {
+  .works__keys__container {
     gap: 40px 0;
     flex-direction: column;
   }
@@ -1188,18 +1204,18 @@ max-width: 20px;
     padding-bottom: 30px;
   }
 }
-.testimonial .container {
+.testimonial .testimonial__container {
   position: relative;
   overflow-x: hidden;
 }
-.testimonial .container .testimonial__scrollbar{
+.testimonial .testimonial__container .testimonial__scrollbar{
   background: rgba(255, 255, 255, 0.05);
   height: 8px;
   border-radius: 30px;
 
 }
 @media(max-width:768px){
-  .testimonial .container .testimonial__scrollbar{
+  .testimonial .testimonial__container .testimonial__scrollbar{
     height: 4px;
   }
 }
@@ -2252,20 +2268,6 @@ body {
   background: var(--black);
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1690px;
-}
-@media (max-width: 1700px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    padding: 0 15px;
-  }
-}
 
 .component__top {
   display: flex;
