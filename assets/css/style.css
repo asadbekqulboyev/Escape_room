@@ -491,6 +491,8 @@ top: -35px;
 }
 .adventure.priority {
   padding: 100px 24px;
+  padding-left: clamp(24px, var(--sp-115-24), 115px);
+    padding-right: clamp(24px, var(--sp-115-24), 115px);
 }
 @media (max-width: 1200px) {
   .adventure.priority {
@@ -640,6 +642,8 @@ top: -35px;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 75vh;
+  max-width: 1373px;
+  margin: 0 auto;
 }
 @media (max-width: 1250px) {
   .works__content__items {
@@ -787,6 +791,8 @@ top: -35px;
 }
 .works__keys {
   padding: 0 24px;
+  padding-left: clamp(24px, var(--sp-115-24), 115px);
+    padding-right: clamp(24px, var(--sp-115-24), 115px);
 }
 @media (max-width: 768px) {
   .works__keys {
