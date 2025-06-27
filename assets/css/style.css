@@ -369,6 +369,8 @@ line-height: 130%;
 
 .adventure {
   padding: 51px 24px 100px;
+  padding-left: clamp(24px, var(--sp-115-24), 115px);
+    padding-right: clamp(24px, var(--sp-115-24), 115px);
 }
 @media (max-width: 1200px) {
   .adventure {
